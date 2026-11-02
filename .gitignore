@@ -1,12 +1,16 @@
 # Prompts & Phase Instructions (Excluded)
 prompts/
+prompts/**
+*.prompt.md
 
 # Environment Variables & Secrets
 .env
 .env.*
-!.env.example
+.env.local
+.env.*.local
 *.env
 *.env.*
+*.local
 *.pem
 *.key
 *.cert
@@ -14,11 +18,19 @@ prompts/
 *.pfx
 *.p12
 *.cer
-id_rsa
-id_ed25519
-credentials.json
-secrets.json
+*.secret
+*.auth
+*.token
 token.json
+tokens.json
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+credentials.json
+credentials*.json
+secrets.json
+secrets*.json
 
 # Dependencies
 node_modules/
@@ -32,6 +44,7 @@ dist-ssr/
 build/
 out/
 .output/
+.vite/
 
 # Logs & Debugging
 logs/
@@ -48,6 +61,8 @@ coverage/
 test-results/
 playwright-report/
 blob-report/
+.playwright/
+playwright/.cache/
 
 # Cache & Temporary Files
 .cache/
@@ -80,4 +95,3 @@ $RECYCLE.BIN/
 # AI & Tool Internal Workspace Directories
 .gemini/
 .antigravity/
-

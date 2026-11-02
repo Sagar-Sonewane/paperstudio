@@ -31,3 +31,4 @@ export function createInitialReport(filename: string, fileSizeBytes: number): Im
     durationMs: 0
   };
 }
+

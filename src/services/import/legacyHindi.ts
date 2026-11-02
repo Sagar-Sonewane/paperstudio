@@ -66,3 +66,4 @@ export async function detectLegacyFontsFromZip(zip: JSZip): Promise<{
         : undefined
   };
 }
+
