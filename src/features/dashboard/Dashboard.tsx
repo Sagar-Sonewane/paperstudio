@@ -76,8 +76,7 @@ export function Dashboard() {
     try {
       setLoading(true);
       const sample = await loadDevSamplePaper();
-      setNotice(`Sample paper "${sample.title}" created with 40 bilingual questions!`);
-      await fetchPapers();
+      navigate(`/paper/${sample.id}`);
     } catch (err: any) {
       setError(`Failed to load dev sample: ${err.message}`);
     } finally {

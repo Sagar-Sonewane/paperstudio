@@ -184,3 +184,4 @@ export const SavedTemplate = z.object({
   createdAt: z.number()
 });
 export type SavedTemplateType = z.infer<typeof SavedTemplate>;
+

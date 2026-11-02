@@ -86,3 +86,4 @@ export function validatePaper(input: unknown): ValidationResult {
     issues
   };
 }
+

@@ -68,3 +68,4 @@ export async function loadDevSamplePaper(): Promise<PaperType> {
   await savePaper(paper);
   return paper;
 }
+

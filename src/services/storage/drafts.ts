@@ -32,7 +32,7 @@ export async function savePaper(paper: PaperType): Promise<void> {
   try {
     const toSave: PaperType = {
       ...paper,
-      updatedAt: Date.now()
+      updatedAt: paper.updatedAt || Date.now()
     };
     await db.papers.put(toSave);
   } catch (err) {
@@ -166,3 +166,4 @@ export async function duplicatePaper(id: string): Promise<PaperType> {
     handleStorageError(err);
   }
 }
+

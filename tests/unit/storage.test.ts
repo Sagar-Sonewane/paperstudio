@@ -123,3 +123,4 @@ describe("Storage Services (Dexie IndexedDB)", () => {
     expect(() => handleStorageError(quotaExceededDOMError)).toThrow(StorageQuotaError);
   });
 });
+

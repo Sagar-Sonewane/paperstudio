@@ -26,3 +26,4 @@ export function handleStorageError(err: unknown): never {
   }
   throw new Error(String(err));
 }
+

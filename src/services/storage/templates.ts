@@ -25,3 +25,4 @@ export async function deleteCustomTemplate(id: string): Promise<void> {
     handleStorageError(err);
   }
 }
+

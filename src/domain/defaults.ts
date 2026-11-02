@@ -78,3 +78,4 @@ export function createDefaultPaper(title = "New Paper Draft"): PaperType {
     updatedAt: now
   };
 }
+

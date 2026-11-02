@@ -154,3 +154,4 @@ describe("Migrations", () => {
     expect(migrated.templateId).toBe("classic");
   });
 });
+

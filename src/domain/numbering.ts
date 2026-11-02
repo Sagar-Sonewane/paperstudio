@@ -68,3 +68,4 @@ export function getOptionLabel(index: number, style = "({L})"): string {
   // Default: {L}
   return style.replace("{L}", latinChar);
 }
+

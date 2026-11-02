@@ -57,3 +57,4 @@ export class PaperStudioDatabase extends Dexie {
 }
 
 export const db = new PaperStudioDatabase();
+
