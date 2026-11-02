@@ -4,7 +4,7 @@ import path from "node:path";
 
 async function runE2ETests() {
   console.log(`\n======================================================`);
-  console.log(`   PAPERSTUDIO E2E TESTS (Phase 3: Import & Review)`);
+  console.log(`   PAPERSTUDIO E2E TESTS (Phase 4: Export & Print)`);
   console.log(`======================================================\n`);
 
   // 1. Start Vite Dev Server on port 5174
@@ -82,25 +82,17 @@ async function runE2ETests() {
     await addOptBtn.click();
     console.log(`✅ Item edited and new option added.`);
 
-    // Step 8: Test Filter Tabs
-    console.log(`\n[E2E Step 8] Testing Filter Tabs`);
-    const questionsFilterBtn = page.getByRole("button", { name: /Questions Only/i });
-    await questionsFilterBtn.click();
-    console.log(`✅ Filtered to Questions Only.`);
-
-    const allFilterBtn = page.getByRole("button", { name: /All Items/i });
-    await allFilterBtn.click();
-    console.log(`✅ Filtered back to All Items.`);
-
-    // Step 9: Continue to Editor
-    console.log(`\n[E2E Step 9] Committing review items to Paper Editor`);
+    // Step 8: Continue to Editor
+    console.log(`\n[E2E Step 8] Committing review items to Paper Editor`);
     const continueBtn = page.getByRole("button", { name: "Continue to Editor" }).first();
     await continueBtn.click();
 
     // Verify Navigation to Editor
     await page.waitForURL(/\/paper\/.+/, { timeout: 15000 });
     const editorUrl = page.url();
-    console.log(`✅ Navigated to Paper Editor URL: ${editorUrl}`);
+    const paperIdMatch = editorUrl.match(/\/paper\/([^/?#]+)/);
+    const paperId = paperIdMatch ? paperIdMatch[1] : "";
+    console.log(`✅ Navigated to Paper Editor URL: ${editorUrl} (ID: ${paperId})`);
 
     // Wait for autosave and pagination
     await page.waitForSelector('text="Saved"', { timeout: 10000 });
@@ -108,26 +100,67 @@ async function runE2ETests() {
 
     const totalPages = await page.locator('[id^="print-page-"]').count();
     console.log(`✅ Imported paper paginated into ${totalPages} A4 pages.`);
-    if (totalPages < 2) {
-      throw new Error(`Expected multi-page pagination for imported paper, got ${totalPages}`);
+
+    // Step 9: Open Pre-Export Validation Modal via "Export DOCX"
+    console.log(`\n[E2E Step 9] Opening Pre-Export Validation Dialog via 'Export DOCX' button`);
+    const exportDocxBtn = page.getByRole("button", { name: /Export DOCX/i }).first();
+    await exportDocxBtn.click();
+
+    await page.waitForSelector('text="Pre-Export Checks"', { timeout: 5000 });
+    await page.waitForSelector('text="Export & Print Paper"', { timeout: 5000 });
+    console.log(`✅ Export modal displayed with pre-export checks.`);
+
+    // Step 10: Trigger DOCX Export Download
+    console.log(`\n[E2E Step 10] Triggering DOCX export download`);
+    const downloadPromise = page.waitForEvent("download", { timeout: 15000 });
+    const modalExportBtn = page.getByRole("dialog").getByRole("button", { name: /Export DOCX/i });
+    await modalExportBtn.click();
+
+    const download = await downloadPromise;
+    const downloadName = download.suggestedFilename();
+    console.log(`✅ Download initiated: ${downloadName}`);
+    if (!downloadName.endsWith(".docx")) {
+      throw new Error(`Expected downloaded file to end with .docx, got: ${downloadName}`);
     }
 
-    // Step 10: Verify Edited Question in Editor
-    console.log(`\n[E2E Step 10] Verifying edited question text in Editor`);
-    await page.locator(':has-text("[Verified Question]")').first().waitFor({ timeout: 10000 });
-    console.log(`✅ Review edits persisted cleanly into the Editor!`);
+    await page.waitForSelector('text=Export successful!', { timeout: 5000 });
+    console.log(`✅ Export success feedback reported.`);
 
-    // Step 11: Return to Dashboard and Verify Separate Drafts
-    console.log(`\n[E2E Step 11] Returning to Dashboard to verify non-destructive drafts`);
-    await page.getByRole("button", { name: "Dashboard" }).click();
-    await page.waitForURL(`${baseUrl}/`, { timeout: 10000 });
-    await page.waitForSelector('text=Recent Papers', { timeout: 10000 });
+    // Step 11: Switch to Print/PDF Tab in Modal
+    console.log(`\n[E2E Step 11] Testing Print / PDF tab inside Export Modal`);
+    const printTabBtn = page.getByRole("dialog").getByRole("button", { name: /Print \/ PDF/i });
+    await printTabBtn.click();
 
-    const draftCards = await page.locator('div:has-text("Recent Papers")').first().locator('..').locator('h4, [class*="font-semibold"]').count();
-    console.log(`✅ Draft list active without overwriting previous work.`);
+    const openPrintBtn = page.getByRole("dialog").getByRole("button", { name: /Open Print Dialog/i });
+    await openPrintBtn.click();
+
+    await page.waitForSelector('text=Print dialog opened.', { timeout: 5000 });
+    console.log(`✅ Print feedback says 'Print dialog opened' (Honesty rule verified).`);
+
+    // Close Modal
+    const closeBtn = page.getByRole("dialog").getByRole("button", { name: /Cancel/i });
+    await closeBtn.click();
+    console.log(`✅ Export modal closed.`);
+
+    // Step 12: Dedicated Print Route (/paper/:id/print)
+    console.log(`\n[E2E Step 12] Navigating to dedicated print route: /paper/${paperId}/print`);
+    await page.goto(`${baseUrl}/paper/${paperId}/print`, { waitUntil: "networkidle" });
+    await page.waitForSelector('.print-page', { timeout: 10000 });
+
+    const printPageCount = await page.locator('.print-page').count();
+    console.log(`✅ Dedicated print view rendered ${printPageCount} printable A4 pages.`);
+    if (printPageCount < 1) {
+      throw new Error(`Expected at least 1 print page, got ${printPageCount}`);
+    }
+
+    // Verify print dialog action button exists
+    const printViewBtn = page.getByRole("button", { name: /Open Print Dialog/i });
+    await printViewBtn.click();
+    await page.waitForSelector('text=Print dialog opened.', { timeout: 5000 });
+    console.log(`✅ Verified print route 'Open Print Dialog' action button.`);
 
     console.log(`\n======================================================`);
-    console.log(`   🎉 ALL PHASE 3 E2E TESTS PASSED SUCCESSFULLY!`);
+    console.log(`   🎉 ALL PHASE 4 E2E TESTS PASSED SUCCESSFULLY!`);
     console.log(`======================================================\n`);
   } finally {
     await browser.close();

@@ -21,9 +21,10 @@ import type { PaperType } from "../../domain/model.ts";
 
 interface LivePreviewProps {
   paper: PaperType;
+  onOpenExport?: (mode: "docx" | "pdf") => void;
 }
 
-export function LivePreview({ paper }: LivePreviewProps) {
+export function LivePreview({ paper, onOpenExport }: LivePreviewProps) {
   const { selectedItemId, selectItem, openQuestionEditor } = usePaperStore();
 
   const [paginationData, setPaginationData] = useState<{
@@ -74,7 +75,11 @@ export function LivePreview({ paper }: LivePreviewProps) {
   }, [pages.length, currentPageIndex]);
 
   const handlePrint = () => {
-    window.print();
+    if (onOpenExport) {
+      onOpenExport("pdf");
+    } else {
+      window.print();
+    }
   };
 
   const handleFitToWidth = () => {

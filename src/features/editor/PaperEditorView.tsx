@@ -16,7 +16,9 @@ import {
   School,
   Columns,
   List,
-  Edit3
+  Edit3,
+  Download,
+  Printer
 } from "lucide-react";
 import { Button } from "../../components/ui/button.tsx";
 import { Input } from "../../components/ui/input.tsx";
@@ -27,6 +29,7 @@ import { duplicatePaper, deletePaper } from "../../services/storage/drafts.ts";
 import { ContentSidebar } from "./ContentSidebar.tsx";
 import { LivePreview } from "./LivePreview.tsx";
 import { QuestionEditorDrawer } from "./QuestionEditorDrawer.tsx";
+import { ExportModal } from "../export/ExportModal.tsx";
 
 export function PaperEditorView() {
   const { id } = useParams<{ id: string }>();
@@ -43,6 +46,8 @@ export function PaperEditorView() {
     undo,
     redo,
     activeDrawer,
+    selectItem,
+    openQuestionEditor,
     loadPaper,
     updateTitle,
     updateInstituteName,
@@ -55,6 +60,8 @@ export function PaperEditorView() {
 
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
   const [settingsModalOpen, setSettingsModalOpen] = useState(false);
+  const [exportModalOpen, setExportModalOpen] = useState(false);
+  const [exportModalMode, setExportModalMode] = useState<"docx" | "pdf">("docx");
   const [localTitle, setLocalTitle] = useState("");
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [mobileTab, setMobileTab] = useState<"sidebar" | "preview" | "drawer">("preview");
@@ -275,6 +282,37 @@ export function PaperEditorView() {
 
         {/* Right Action Bar */}
         <div className="flex items-center gap-1 sm:gap-2">
+          {/* Export DOCX Button */}
+          <Button
+            size="sm"
+            onClick={() => {
+              setExportModalMode("docx");
+              setExportModalOpen(true);
+            }}
+            className="h-8 text-xs bg-blue-600 text-white hover:bg-blue-700 font-semibold shadow-2xs gap-1.5"
+            title="Export Microsoft Word (.docx)"
+          >
+            <Download className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">Export DOCX</span>
+          </Button>
+
+          {/* Print / PDF Button */}
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              setExportModalMode("pdf");
+              setExportModalOpen(true);
+            }}
+            className="h-8 text-xs text-slate-700 font-semibold gap-1.5"
+            title="Print or Save as PDF"
+          >
+            <Printer className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">Print</span>
+          </Button>
+
+          <div className="h-4 w-px bg-slate-200 mx-0.5 hidden sm:block" />
+
           {/* Paper Settings */}
           <Button
             variant="outline"
@@ -366,7 +404,13 @@ export function PaperEditorView() {
             mobileTab === "preview" ? "block" : "hidden md:block"
           }`}
         >
-          <LivePreview paper={paper} />
+          <LivePreview
+            paper={paper}
+            onOpenExport={(mode) => {
+              setExportModalMode(mode);
+              setExportModalOpen(true);
+            }}
+          />
         </div>
 
         {/* Right Area: Question Editor Drawer */}
@@ -480,6 +524,18 @@ export function PaperEditorView() {
         destructive
         onConfirm={handleDelete}
         onCancel={() => setDeleteConfirmOpen(false)}
+      />
+
+      {/* Pre-Export Validation & Export Dialog */}
+      <ExportModal
+        open={exportModalOpen}
+        onClose={() => setExportModalOpen(false)}
+        paper={paper}
+        initialMode={exportModalMode}
+        onSelectFixItem={(itemId) => {
+          selectItem(itemId);
+          openQuestionEditor(itemId);
+        }}
       />
     </div>
   );
