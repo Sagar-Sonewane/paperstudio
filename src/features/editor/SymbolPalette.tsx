@@ -55,3 +55,4 @@ export function SymbolPalette({ onInsert }: SymbolPaletteProps) {
     </div>
   );
 }
+

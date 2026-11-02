@@ -90,3 +90,4 @@ export interface PageLayout {
   columns: ColumnLayout[];
   warnings: string[];
 }
+
