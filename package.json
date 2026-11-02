@@ -1,0 +1,44 @@
+{
+  "name": "paperstudio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "spike:paginator": "tsx spikes/paginator/test-paginator.ts",
+    "spike:importer": "tsx spikes/importer/run-importer.ts",
+    "spike:docx": "tsx spikes/docx/run-docx.ts",
+    "spikes": "npm run spike:importer && npm run spike:docx && npm run spike:paginator"
+  },
+  "dependencies": {
+    "@fontsource/noto-sans-devanagari": "^5.2.5",
+    "clsx": "^2.1.1",
+    "dexie": "^4.0.11",
+    "docx": "^9.2.0",
+    "fast-xml-parser": "^5.0.8",
+    "immer": "^10.1.1",
+    "jszip": "^3.10.1",
+    "katex": "^0.16.21",
+    "lucide-react": "^1.16.0",
+    "nanoid": "^5.1.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.2",
+    "zod": "^3.24.2",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "playwright": "^1.50.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.7"
+  }
+}

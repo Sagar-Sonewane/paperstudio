@@ -1,0 +1,20 @@
+{
+  "docxPath": "D:\\sagar\\paperstudio\\spikes\\docx\\bilingual-sample.docx",
+  "fileSizeBytes": 13287,
+  "xmlValidation": {
+    "hasA4Size": true,
+    "has2Columns": true,
+    "hasDoublePageBorder": true,
+    "hasHeader": true,
+    "hasFooter": true,
+    "hasHindiFontSlot": true,
+    "hasHindiText": true
+  },
+  "libreOfficeResult": {
+    "attempted": true,
+    "command": "soffice --headless --convert-to pdf \"D:\\sagar\\paperstudio\\spikes\\docx\\bilingual-sample.docx\" --outdir \"D:\\sagar\\paperstudio\\spikes\\docx\"",
+    "success": false,
+    "outputOrError": "Command failed: soffice --headless --convert-to pdf \"D:\\sagar\\paperstudio\\spikes\\docx\\bilingual-sample.docx\" --outdir \"D:\\sagar\\paperstudio\\spikes\\docx\"\n'soffice' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+    "pdfGenerated": false
+  }
+}

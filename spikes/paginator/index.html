@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaperStudio - Paginator Spike (40 Bilingual MCQs)</title>
+  <link rel="stylesheet" href="../../node_modules/@fontsource/noto-sans-devanagari/400.css">
+  <link rel="stylesheet" href="../../node_modules/@fontsource/noto-sans-devanagari/700.css">
+  <style>
+    :root {
+      --font-body: 'Noto Sans Devanagari', 'Times New Roman', 'Mangal', serif, sans-serif;
+      --page-width: 210mm;
+      --page-height: 297mm;
+      --col-width-px: 336px; /* ~89mm at 96 DPI */
+      --col-height-px: 890px; /* Net printable column height */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #525659;
+      font-family: var(--font-body);
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    #controls {
+      background: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    #controls button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    #controls button:hover {
+      background: #1d4ed8;
+    }
+
+    /* Off-screen measurement container */
+    #measurement-sandbox {
+      position: absolute;
+      top: 0;
+      left: -9999px;
+      width: var(--col-width-px);
+      visibility: hidden;
+      pointer-events: none;
+      font-family: var(--font-body);
+    }
+
+    /* A4 Page Styling */
+    .a4-page {
+      width: var(--page-width);
+      height: var(--page-height);
+      min-height: var(--page-height);
+      max-height: var(--page-height);
+      background: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      margin-bottom: 25px;
+      padding: 10mm;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Double Border Enclosure */
+    .page-border {
+      border: 3.5px double #000;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 6mm 7mm;
+    }
+
+    /* Running Header */
+    .page-header {
+      text-align: center;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 5px;
+      margin-bottom: 8px;
+    }
+
+    .institute-title {
+      font-size: 14pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .exam-subtitle {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #222;
+      margin: 2px 0 4px 0;
+    }
+
+    .student-meta-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      border-top: 0.5px dashed #666;
+      padding-top: 3px;
+      margin-top: 2px;
+    }
+
+    /* 2-Column Content Layout */
+    .column-container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      column-gap: 6mm;
+      height: var(--col-height-px);
+      max-height: var(--col-height-px);
+      overflow: hidden;
+    }
+
+    .column-divider {
+      background-color: #888;
+      height: 100%;
+      width: 1px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      height: var(--col-height-px);
+      max-height: var(--col-height-px);
+      overflow: hidden;
+    }
+
+    /* Content Block Styling */
+    .content-block {
+      width: 100%;
+      font-size: 8.5pt;
+      line-height: 1.35;
+      color: #111;
+    }
+
+    .block-heading {
+      background-color: #f1f1f1;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      font-weight: 700;
+      font-size: 9pt;
+      padding: 3px 4px;
+      margin: 6px 0;
+      text-align: center;
+    }
+
+    .block-question {
+      margin-bottom: 7px;
+      padding-bottom: 3px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .question-stem {
+      font-weight: 700;
+      margin-bottom: 3px;
+      text-align: justify;
+    }
+
+    .question-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2px;
+      column-gap: 6px;
+      padding-left: 2px;
+      font-size: 8pt;
+    }
+
+    .option-item {
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    /* Running Footer */
+    .page-footer {
+      border-top: 1px solid #000;
+      padding-top: 4px;
+      margin-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8pt;
+    }
+
+    /* Print Specific Media Rules */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      #controls {
+        display: none !important;
+      }
+
+      .a4-page {
+        box-shadow: none !important;
+        margin: 0 !important;
+        page-break-after: always;
+        break-after: page;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <span id="status-text">⏳ Loading fonts and measuring layout...</span>
+    <button onclick="window.print()">🖨️ Print / Save PDF</button>
+  </div>
+
+  <div id="measurement-sandbox"></div>
+  <div id="pages-container"></div>
+
+  <!-- Load Data -->
+  <script src="./paginator-data.js"></script>
+
+  <!-- Paginator Logic -->
+  <script>
+    const paperItems = window.BILINGUAL_40_QUESTIONS || [];
+
+    window.PAGINATOR_STATE = {
+      fontsLoaded: false,
+      ready: false,
+      totalPages: 0,
+      totalQuestions: 0,
+      columnMetrics: []
+    };
+
+    function createBlockHtml(item) {
+      if (item.kind === 'heading') {
+        return `
+          <div class="content-block block-heading" data-id="${item.id}" data-type="heading">
+            ${item.text}
+          </div>
+        `;
+      }
+
+      return `
+        <div class="content-block block-question" data-id="${item.id}" data-type="question">
+          <div class="question-stem">${item.stem}</div>
+          <div class="question-options-grid">
+            <div class="option-item">${item.options[0]}</div>
+            <div class="option-item">${item.options[1]}</div>
+            <div class="option-item">${item.options[2]}</div>
+            <div class="option-item">${item.options[3]}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    async function runPaginator() {
+      const statusText = document.getElementById('status-text');
+      const sandbox = document.getElementById('measurement-sandbox');
+      const pagesContainer = document.getElementById('pages-container');
+
+      // 1. Wait for document.fonts.ready
+      await document.fonts.ready;
+      window.PAGINATOR_STATE.fontsLoaded = true;
+
+      // 2. Measure each block in off-screen sandbox
+      const measuredItems = [];
+      for (const item of paperItems) {
+        sandbox.innerHTML = createBlockHtml(item);
+        const el = sandbox.firstElementChild;
+        // Force reflow
+        const height = el.getBoundingClientRect().height;
+        measuredItems.push({
+          item,
+          height: Math.ceil(height) + 4, // 4px margin allowance
+          html: createBlockHtml(item)
+        });
+      }
+      sandbox.innerHTML = '';
+
+      // 3. Pack items into 2 columns on A4 pages
+      const MAX_COL_HEIGHT = 890; // px
+      const pages = [];
+      let currentPage = { pageNumber: 1, col0: [], col1: [], col0Height: 0, col1Height: 0 };
+      let currentColIndex = 0; // 0 = left column, 1 = right column
+
+      function getCurrentColHeight() {
+        return currentColIndex === 0 ? currentPage.col0Height : currentPage.col1Height;
+      }
+
+      function pushToCurrentCol(mItem) {
+        if (currentColIndex === 0) {
+          currentPage.col0.push(mItem);
+          currentPage.col0Height += mItem.height;
+        } else {
+          currentPage.col1.push(mItem);
+          currentPage.col1Height += mItem.height;
+        }
+      }
+
+      function advanceColumn() {
+        if (currentColIndex === 0) {
+          currentColIndex = 1;
+        } else {
+          pages.push(currentPage);
+          currentPage = {
+            pageNumber: pages.length + 1,
+            col0: [],
+            col1: [],
+            col0Height: 0,
+            col1Height: 0
+          };
+          currentColIndex = 0;
+        }
+      }
+
+      for (let i = 0; i < measuredItems.length; i++) {
+        const m = measuredItems[i];
+        const isHeading = m.item.kind === 'heading';
+
+        // Check Keep-With-Next for headings
+        if (isHeading) {
+          const nextItem = measuredItems[i + 1];
+          const nextHeight = nextItem ? nextItem.height : 0;
+          const neededSpace = m.height + nextHeight;
+
+          if (getCurrentColHeight() + neededSpace > MAX_COL_HEIGHT && getCurrentColHeight() > 0) {
+            // Heading + next block won't fit in remaining space -> Advance to next column!
+            advanceColumn();
+          }
+          pushToCurrentCol(m);
+          continue;
+        }
+
+        // Standard question block (Keep options together)
+        if (getCurrentColHeight() + m.height > MAX_COL_HEIGHT && getCurrentColHeight() > 0) {
+          advanceColumn();
+        }
+        pushToCurrentCol(m);
+      }
+
+      if (currentPage.col0.length > 0 || currentPage.col1.length > 0) {
+        pages.push(currentPage);
+      }
+
+      // 4. Render Pages
+      pagesContainer.innerHTML = '';
+      pages.forEach((page, pIdx) => {
+        const pageEl = document.createElement('div');
+        pageEl.className = 'a4-page';
+        pageEl.id = `page-${page.pageNumber}`;
+
+        pageEl.innerHTML = `
+          <div class="page-border">
+            <header class="page-header">
+              <div class="institute-title">PAPERSTUDIO COACHING ACADEMY</div>
+              <div class="exam-subtitle">साप्ताहिक अभ्यास परीक्षा / Weekly Model Test Paper (Class X - Bilingual)</div>
+              <div class="student-meta-row">
+                <span><strong>विद्यार्थी का नाम (Name):</strong> _______________________________</span>
+                <span><strong>अनुक्रमांक (Roll No):</strong> ____________</span>
+                <span><strong>दिनांक (Date):</strong> 02/11/2026</span>
+                <span><strong>पूर्णांक (Max Marks):</strong> 40</span>
+              </div>
+            </header>
+
+            <main class="column-container">
+              <div class="column column-left">
+                ${page.col0.map(m => m.html).join('')}
+              </div>
+              <div class="column-divider"></div>
+              <div class="column column-right">
+                ${page.col1.map(m => m.html).join('')}
+              </div>
+            </main>
+
+            <footer class="page-footer">
+              <span>PaperStudio Bilingual Layout Engine</span>
+              <span><strong>Page ${page.pageNumber} of ${pages.length}</strong></span>
+              <span>हस्ताक्षर परीक्षक (Examiner Signature)</span>
+            </footer>
+          </div>
+        `;
+        pagesContainer.appendChild(pageEl);
+      });
+
+      // Update state for automated tests
+      window.PAGINATOR_STATE.ready = true;
+      window.PAGINATOR_STATE.totalPages = pages.length;
+      window.PAGINATOR_STATE.totalQuestions = paperItems.filter(q => q.kind === 'question').length;
+      window.PAGINATOR_STATE.columnMetrics = pages.map(p => ({
+        page: p.pageNumber,
+        col0Height: p.col0Height,
+        col1Height: p.col1Height,
+        col0Count: p.col0.length,
+        col1Count: p.col1.length
+      }));
+
+      statusText.innerHTML = `✅ <strong>Layout Complete:</strong> ${window.PAGINATOR_STATE.totalQuestions} Questions packed into <strong>${pages.length} A4 Pages</strong> (2 Columns). All rules enforced.`;
+    }
+
+    // Run when DOM is loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', runPaginator);
+    } else {
+      runPaginator();
+    }
+  </script>
+</body>
+</html>

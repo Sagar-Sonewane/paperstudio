@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "fontsLoaded": true,
+  "totalPages": 2,
+  "totalQuestions": 40,
+  "headingsKeptWithNext": true,
+  "optionsKeptWithQuestion": true,
+  "columnMetrics": [
+    {
+      "page": 1,
+      "col0Height": 852,
+      "col1Height": 825,
+      "col0Count": 11,
+      "col1Count": 11
+    },
+    {
+      "page": 2,
+      "col0Height": 866,
+      "col1Height": 708,
+      "col0Count": 12,
+      "col1Count": 9
+    }
+  ],
+  "pdfGenerated": true,
+  "screenshotPaths": [
+    "D:\\sagar\\paperstudio\\spikes\\paginator\\page-1.png",
+    "D:\\sagar\\paperstudio\\spikes\\paginator\\page-2.png"
+  ]
+}

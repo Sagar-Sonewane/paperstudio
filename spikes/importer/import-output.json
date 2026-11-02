@@ -1,0 +1,6962 @@
+{
+  "summary": {
+    "totalBlocks": 142,
+    "questionCount": 50,
+    "optionCount": 79,
+    "headerMetaCount": 0,
+    "headingCount": 0,
+    "instructionCount": 1,
+    "emptyCount": 8,
+    "unclassifiedCount": 4,
+    "fontsDetected": [
+      "Times New Roman",
+      "Aptos",
+      "Aptos Display",
+      "Mangal Pro",
+      "Cambria Math",
+      "Cambria"
+    ],
+    "legacyHindiFontsFound": []
+  },
+  "blocks": [
+    {
+      "id": "b_1",
+      "type": "empty",
+      "rawText": "",
+      "runs": [],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_2",
+      "type": "empty",
+      "rawText": "",
+      "runs": [],
+      "fontsUsed": [],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_3",
+      "type": "empty",
+      "rawText": "",
+      "runs": [],
+      "fontsUsed": [],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_4",
+      "type": "empty",
+      "rawText": "",
+      "runs": [],
+      "fontsUsed": [],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_5",
+      "type": "empty",
+      "rawText": "",
+      "runs": [],
+      "fontsUsed": [],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_6",
+      "type": "question",
+      "rawText": "प्र. 1. वह कौन-सी संख्या है, जो पूर्ण है परन्तु प्राकृत नहीं?",
+      "questionNumber": "1",
+      "runs": [
+        {
+          "text": "प्र. 1. वह कौन-सी संख्या है, जो पूर्ण है परन्तु प्राकृत नहीं?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_7",
+      "type": "option",
+      "rawText": "(A) 9 (B) 0 (C) 24 (D) 84",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 9 (B) 0 (C) 24 (D) 84",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "0"
+        },
+        {
+          "label": "C",
+          "text": "24"
+        },
+        {
+          "label": "D",
+          "text": "84"
+        }
+      ]
+    },
+    {
+      "id": "b_8",
+      "type": "question",
+      "rawText": "प्र. 2. अंक 231402 में 4 के स्थानीय और जातीय मान में अंतर क्या है?",
+      "questionNumber": "2",
+      "runs": [
+        {
+          "text": "प्र. 2. अंक 231402 में 4 के स्थानीय और जातीय मान में अंतर क्या है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_9",
+      "type": "option",
+      "rawText": "(A) 396 (B) 344 (C) 400 (D) 490",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 396 (B) 344 (C) 400 (D) 490",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "396"
+        },
+        {
+          "label": "B",
+          "text": "344"
+        },
+        {
+          "label": "C",
+          "text": "400"
+        },
+        {
+          "label": "D",
+          "text": "490"
+        }
+      ]
+    },
+    {
+      "id": "b_10",
+      "type": "question",
+      "rawText": "प्र. 3. किसी संख्या को 68 से भाग देने पर भागफल 121 तथा शेष 18 प्राप्त होता है, तो वह संख्या क्या है?",
+      "questionNumber": "3",
+      "runs": [
+        {
+          "text": "प्र. 3. किसी संख्या को 68 से भाग देने पर भागफल 121 तथा शेष 18 प्राप्त होता है, तो वह संख्या क्या है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_11",
+      "type": "option",
+      "rawText": "(A) 8244 (B) 8246 (C) 8248 (D) 8250",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 8244 (B) 8246 (C) 8248 (D) 8250",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "8244"
+        },
+        {
+          "label": "B",
+          "text": "8246"
+        },
+        {
+          "label": "C",
+          "text": "8248"
+        },
+        {
+          "label": "D",
+          "text": "8250"
+        }
+      ]
+    },
+    {
+      "id": "b_12",
+      "type": "question",
+      "rawText": "प्र. 4.2-132-352-57…2-997999= ?",
+      "questionNumber": "4",
+      "runs": [
+        {
+          "text": "प्र. 4.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "[Math: 2-132-352-57…2-997999= ?]",
+          "fontAscii": "Cambria Math"
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": true,
+      "hasShape": false
+    },
+    {
+      "id": "b_13",
+      "type": "unclassified",
+      "rawText": "",
+      "runs": [],
+      "fontsUsed": [],
+      "hasDrawing": false,
+      "hasMath": true,
+      "hasShape": false,
+      "warning": "Does not match standard question, option, heading, or metadata pattern"
+    },
+    {
+      "id": "b_14",
+      "type": "option",
+      "rawText": "(A) 333 (B)10003(C)10013(D)9973",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 333 (B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 10003]",
+          "fontAscii": "Cambria Math"
+        },
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 10013]",
+          "fontAscii": "Cambria Math"
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 9973]",
+          "fontAscii": "Cambria Math"
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": true,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "333"
+        },
+        {
+          "label": "B",
+          "text": "10003"
+        },
+        {
+          "label": "C",
+          "text": "10013"
+        },
+        {
+          "label": "D",
+          "text": "9973"
+        }
+      ]
+    },
+    {
+      "id": "b_15",
+      "type": "question",
+      "rawText": "प्र. 5. 186 × ? ÷ 14 = 1302",
+      "questionNumber": "5",
+      "runs": [
+        {
+          "text": "प्र. 5. 186 × ? ÷ 14 = 1302",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_16",
+      "type": "option",
+      "rawText": "(A) 98 (B) 92 (C) 88 (D) 84",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 98 (B) 92 (C) 88 (D) 84",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "98"
+        },
+        {
+          "label": "B",
+          "text": "92"
+        },
+        {
+          "label": "C",
+          "text": "88"
+        },
+        {
+          "label": "D",
+          "text": "84"
+        }
+      ]
+    },
+    {
+      "id": "b_17",
+      "type": "question",
+      "rawText": "प्र. 6. 338 × 97 - 1835 = ?",
+      "questionNumber": "6",
+      "runs": [
+        {
+          "text": "प्र. 6. 338 × 97 - 1835 = ?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_18",
+      "type": "option",
+      "rawText": "(A) 30951 (B) 31951 (C) 29951 (D) 32951",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 30951 (B) 31951 (C) 29951 (D) 32951",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "30951"
+        },
+        {
+          "label": "B",
+          "text": "31951"
+        },
+        {
+          "label": "C",
+          "text": "29951"
+        },
+        {
+          "label": "D",
+          "text": "32951"
+        }
+      ]
+    },
+    {
+      "id": "b_19",
+      "type": "question",
+      "rawText": "प्र. 7. -31 - 35 - 37 + 18 + 17 = ?",
+      "questionNumber": "7",
+      "runs": [
+        {
+          "text": "प्र. 7. -31 - 35 - 37 + 18 + 17 = ?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_20",
+      "type": "option",
+      "rawText": "(A) -68 (B) -103 (C) -86 (D) 66",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) -68 (B) -103 (C) -86 (D) 66",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "-68"
+        },
+        {
+          "label": "B",
+          "text": "-103"
+        },
+        {
+          "label": "C",
+          "text": "-86"
+        },
+        {
+          "label": "D",
+          "text": "66"
+        }
+      ]
+    },
+    {
+      "id": "b_21",
+      "type": "question",
+      "rawText": "प्र. 8. 7855 - 4236 + 388 = ? + 3974",
+      "questionNumber": "8",
+      "runs": [
+        {
+          "text": "प्र. 8. 7855 - 4236 + 388 = ? + 3974",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_22",
+      "type": "option",
+      "rawText": "(A) 133 (B) 73 (C) 33 (D) 43",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 133 (B) 73 (C) 33 (D) 43",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "133"
+        },
+        {
+          "label": "B",
+          "text": "73"
+        },
+        {
+          "label": "C",
+          "text": "33"
+        },
+        {
+          "label": "D",
+          "text": "43"
+        }
+      ]
+    },
+    {
+      "id": "b_23",
+      "type": "question",
+      "rawText": "प्र. 9. (25 × 6000) ÷ 150 × 45 = ?",
+      "questionNumber": "9",
+      "runs": [
+        {
+          "text": "प्र. 9. (25 × 6000) ÷ 150 × 45 = ?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_24",
+      "type": "option",
+      "rawText": "(A) 4500 (B) 50000 (C) 5000 (D) 45000",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 4500 (B) 50000 (C) 5000 (D) 45000",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "4500"
+        },
+        {
+          "label": "B",
+          "text": "50000"
+        },
+        {
+          "label": "C",
+          "text": "5000"
+        },
+        {
+          "label": "D",
+          "text": "45000"
+        }
+      ]
+    },
+    {
+      "id": "b_25",
+      "type": "question",
+      "rawText": "प्र. 10. 4321 - 9241 + 5642 + 3220 = ? + 1203",
+      "questionNumber": "10",
+      "runs": [
+        {
+          "text": "प्र. 10. 4321 - 9241 + 5642 + 3220 = ? + 1203",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_26",
+      "type": "option",
+      "rawText": "(A) 2649 (B) 2769 (C) 2639 (D) 2739",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 2649 (B) 2769 (C) 2639 (D) 2739",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "2649"
+        },
+        {
+          "label": "B",
+          "text": "2769"
+        },
+        {
+          "label": "C",
+          "text": "2639"
+        },
+        {
+          "label": "D",
+          "text": "2739"
+        }
+      ]
+    },
+    {
+      "id": "b_27",
+      "type": "question",
+      "rawText": "प्र. 11. (1 - 1/3)(1 - 1/4)(1 - 1/5) ...... (1 - 1/25) = ?",
+      "questionNumber": "11",
+      "runs": [
+        {
+          "text": "प्र. 11. (1 - 1/3)(1 - 1/4)(1 - 1/5) ...... (1 - 1/25) = ?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_28",
+      "type": "option",
+      "rawText": "(A)225\t(B)125\t(C)1925\t(D)1325",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 225]",
+          "fontAscii": "Cambria Math"
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 125]",
+          "fontAscii": "Cambria Math"
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 1925]",
+          "fontAscii": "Cambria Math"
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 1325]",
+          "fontAscii": "Cambria Math"
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro",
+        "Cambria Math"
+      ],
+      "hasDrawing": false,
+      "hasMath": true,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "225"
+        },
+        {
+          "label": "B",
+          "text": "125"
+        },
+        {
+          "label": "C",
+          "text": "1925"
+        },
+        {
+          "label": "D",
+          "text": "1325"
+        }
+      ]
+    },
+    {
+      "id": "b_29",
+      "type": "empty",
+      "rawText": "",
+      "runs": [],
+      "fontsUsed": [],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_30",
+      "type": "question",
+      "rawText": "प्र. 12. वह बड़ी से बड़ी संख्या जिससे 43, 91, 183 को भाग करने पर प्रत्येक स्थिति में समान शेषफल बचे?",
+      "questionNumber": "12",
+      "runs": [
+        {
+          "text": "प्र. 12. वह बड़ी से बड़ी संख्या जिससे 43, 91, 183 को भाग करने पर प्रत्येक स्थिति में समान शेषफल बचे?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_31",
+      "type": "option",
+      "rawText": "(A) 8\t(B) 4\t(C) 9\t(D) 5",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 8",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) 4",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C) 9",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) 5",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "8"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ]
+    },
+    {
+      "id": "b_32",
+      "type": "question",
+      "rawText": "प्र. 13. 2²×3³×4⁴×5⁶, 2⁴×3³×5⁴×6²तथा 3²×5²×9³×15 का म.स. (H.C.F.) ज्ञात कीजिए?",
+      "questionNumber": "13",
+      "runs": [
+        {
+          "text": "प्र. 13. 2",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "²",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "×3",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "³",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "×4",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "⁴",
+          "fontAscii": "Cambria Math",
+          "fontCs": "Cambria Math",
+          "fontHAnsi": "Cambria Math",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "×5",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "⁶",
+          "fontAscii": "Cambria Math",
+          "fontCs": "Cambria Math",
+          "fontHAnsi": "Cambria Math",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ", 2",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "⁴",
+          "fontAscii": "Cambria Math",
+          "fontCs": "Cambria Math",
+          "fontHAnsi": "Cambria Math",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "×3",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "³",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "×5",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "⁴",
+          "fontAscii": "Cambria Math",
+          "fontCs": "Cambria Math",
+          "fontHAnsi": "Cambria Math",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "×6",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "²",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "तथा 3",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "²",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "×5",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "²",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "×9",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "³",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "×15 का म.स. (H.C.F.) ज्ञात कीजिए?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro",
+        "Cambria",
+        "Cambria Math"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_33",
+      "type": "option",
+      "rawText": "(A) 890 (B) 1400 (C) 290 (D) 540",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 890 (B) 1400 (C) 290 (D) 540",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "890"
+        },
+        {
+          "label": "B",
+          "text": "1400"
+        },
+        {
+          "label": "C",
+          "text": "290"
+        },
+        {
+          "label": "D",
+          "text": "540"
+        }
+      ]
+    },
+    {
+      "id": "b_34",
+      "type": "question",
+      "rawText": "प्र. 14. वह छोटी-से-छोटी संख्या निकालें जिसे 16, 24 तथा 30 से भाग देने पर क्रमशः 6, 14 तथा 20 शेषफल बचे?",
+      "questionNumber": "14",
+      "runs": [
+        {
+          "text": "प्र. 14. वह छोटी-से-छोटी संख्या निकालें जिसे 16, 24 तथा 30 से भाग देने पर क्रमशः 6, 14 तथा 20 शेषफल बचे?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_35",
+      "type": "option",
+      "rawText": "(A) 6300 (B) 230 (C) 614 (D) 125",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 6300 (B) 230 (C) 614 (D) 125",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "6300"
+        },
+        {
+          "label": "B",
+          "text": "230"
+        },
+        {
+          "label": "C",
+          "text": "614"
+        },
+        {
+          "label": "D",
+          "text": "125"
+        }
+      ]
+    },
+    {
+      "id": "b_36",
+      "type": "question",
+      "rawText": "प्र. 15. दो संख्याओं का ल.स. (L.C.M.) 6480 व म.स. (H.C.F.) 6 है। यदि एक संख्या 162 है, तो दूसरी संख्या कितनी होगी?",
+      "questionNumber": "15",
+      "runs": [
+        {
+          "text": "प्र. 15. दो संख्याओं का ल.स. (L.C.M.) 6480 व म.स. (H.C.F.) 6 है। यदि एक संख्या 162 है, तो दूसरी संख्या कितनी होगी?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_37",
+      "type": "option",
+      "rawText": "(A) 125 (B) 360 (C) 279 (D) 240",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 125 (B) 360 (C) 279 (D) 240",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "125"
+        },
+        {
+          "label": "B",
+          "text": "360"
+        },
+        {
+          "label": "C",
+          "text": "279"
+        },
+        {
+          "label": "D",
+          "text": "240"
+        }
+      ]
+    },
+    {
+      "id": "b_38",
+      "type": "question",
+      "rawText": "प्र. 16. अंग्रेजी वर्णमाला क्रम के अनुसार:",
+      "questionNumber": "16",
+      "runs": [
+        {
+          "text": "प्र. 16. अंग्रेजी वर्णमाला क्रम के अनुसार:",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_39",
+      "type": "unclassified",
+      "rawText": "BEH का संबंध GJM से है,",
+      "runs": [
+        {
+          "text": "BEH का संबंध GJM से है,",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "warning": "Does not match standard question, option, heading, or metadata pattern"
+    },
+    {
+      "id": "b_40",
+      "type": "unclassified",
+      "rawText": "FOT का संबंध KTY से है।",
+      "runs": [
+        {
+          "text": "FOT का संबंध KTY से है।",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "warning": "Does not match standard question, option, heading, or metadata pattern"
+    },
+    {
+      "id": "b_41",
+      "type": "unclassified",
+      "rawText": "इसी क्रम के अनुसार LIN का संबंध किससे होगा?",
+      "runs": [
+        {
+          "text": "इसी क्रम के अनुसार LIN का संबंध किससे होगा?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "warning": "Does not match standard question, option, heading, or metadata pattern"
+    },
+    {
+      "id": "b_42",
+      "type": "option",
+      "rawText": "(A) NAT (B) OLQ (C) IFK (D) QNS",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) NAT (B) OLQ (C) IFK (D) QNS",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "NAT"
+        },
+        {
+          "label": "B",
+          "text": "OLQ"
+        },
+        {
+          "label": "C",
+          "text": "IFK"
+        },
+        {
+          "label": "D",
+          "text": "QNS"
+        }
+      ]
+    },
+    {
+      "id": "b_43",
+      "type": "question",
+      "rawText": "प्र. 17. उस श्रृंखला को पहचानें, जो अन्य से भिन्न (अलग) है?",
+      "questionNumber": "17",
+      "runs": [
+        {
+          "text": "प्र. 17. उस श्रृंखला को पहचानें, जो अन्य से भिन्न (अलग) है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_44",
+      "type": "option",
+      "rawText": "(A) 0.0016, 0.04, 0.2 (B) 243, 81, 27",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 0.0016, 0.04, 0.2 (B) 243, 81, 27",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "0.0016, 0.04, 0.2"
+        },
+        {
+          "label": "B",
+          "text": "243, 81, 27"
+        }
+      ]
+    },
+    {
+      "id": "b_45",
+      "type": "option",
+      "rawText": "(C) 2401, 49, 7\t(D)116,14,12",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) 2401, 49, 7",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 116,14,12]",
+          "fontAscii": "Cambria Math"
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": true,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "2401, 49, 7"
+        },
+        {
+          "label": "D",
+          "text": "116,14,12"
+        }
+      ]
+    },
+    {
+      "id": "b_46",
+      "type": "question",
+      "rawText": "प्र. 18. निम्नलिखित विकल्पों में से विषम (अलग) शब्द का चयन कीजिए?",
+      "questionNumber": "18",
+      "runs": [
+        {
+          "text": "प्र. 18. निम्नलिखित विकल्पों में से विषम (अलग) शब्द का चयन कीजिए?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_47",
+      "type": "option",
+      "rawText": "(A) सारंगी\t\t(B) टेलीफोन",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) सारंगी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t(B) टेलीफोन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "सारंगी"
+        },
+        {
+          "label": "B",
+          "text": "टेलीफोन"
+        }
+      ]
+    },
+    {
+      "id": "b_48",
+      "type": "option",
+      "rawText": "(C) सैक्सोफोन\t\t(D) जाइलोफोन",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) सैक्सोफोन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t(D) जाइलोफोन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "सैक्सोफोन"
+        },
+        {
+          "label": "D",
+          "text": "जाइलोफोन"
+        }
+      ]
+    },
+    {
+      "id": "b_49",
+      "type": "empty",
+      "rawText": "",
+      "runs": [],
+      "fontsUsed": [],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_50",
+      "type": "question",
+      "rawText": "प्र. 19. एक बेलन (Cylinder) की त्रिज्या r और ऊँचाई h होने पर उसका आयतन (Volume) निकालने का सही सूत्र कौन-सा है?",
+      "questionNumber": "19",
+      "runs": [
+        {
+          "text": "प्र. 19. एक बेलन (Cylinder) की त्रिज्या r और ऊँचाई h होने पर उसका आयतन (Volume) निकालने का सही सूत्र कौन-सा है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_51",
+      "type": "option",
+      "rawText": "(A) 2πrh\t\t(B) πr²h",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 2πrh",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) πr",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "²",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "h",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro",
+        "Cambria"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "2πrh"
+        },
+        {
+          "label": "B",
+          "text": "πr²h"
+        }
+      ]
+    },
+    {
+      "id": "b_52",
+      "type": "option",
+      "rawText": "(C)13πr²h\t\t(D) 2πr(r + h)",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 13]",
+          "fontAscii": "Cambria Math"
+        },
+        {
+          "text": "πr",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "²",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "h",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) 2πr(r + h)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro",
+        "Cambria"
+      ],
+      "hasDrawing": false,
+      "hasMath": true,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "13πr²h"
+        },
+        {
+          "label": "D",
+          "text": "2πr"
+        }
+      ]
+    },
+    {
+      "id": "b_53",
+      "type": "question",
+      "rawText": "प्र. 20. एक शंकु (Cone) का कुल पृष्ठीय क्षेत्रफल (Total Surface Area) निकालने का सूत्र क्या होता है, जहाँ r त्रिज्या और l तिर्यक ऊँचाई (Slant Height) है?",
+      "questionNumber": "20",
+      "runs": [
+        {
+          "text": "प्र. 20. एक शंकु (Cone) का कुल पृष्ठीय क्षेत्रफल (Total Surface Area) निकालने का सूत्र क्या होता है, जहाँ r त्रिज्या और l तिर्यक ऊँचाई (Slant Height) है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_54",
+      "type": "option",
+      "rawText": "(A) πrl\t\t(B)13πr²h",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) πrl",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "[Math: 13]",
+          "fontAscii": "Cambria Math"
+        },
+        {
+          "text": "πr",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "²",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "h",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro",
+        "Cambria"
+      ],
+      "hasDrawing": false,
+      "hasMath": true,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "πrl"
+        },
+        {
+          "label": "B",
+          "text": "13πr²h"
+        }
+      ]
+    },
+    {
+      "id": "b_55",
+      "type": "option",
+      "rawText": "(C) πr(l + r)\t\t(D) 4πr²",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) πr(l + r)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t(D) 4πr",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "²",
+          "fontAscii": "Cambria",
+          "fontCs": "Cambria",
+          "fontHAnsi": "Cambria",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro",
+        "Cambria"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "πr"
+        },
+        {
+          "label": "D",
+          "text": "4πr²"
+        }
+      ]
+    },
+    {
+      "id": "b_56",
+      "type": "question",
+      "rawText": "प्र. 21. हर्यक वंश के संस्थापक बिम्बिसार मगध की गद्दी पर कब बैठे?",
+      "questionNumber": "21",
+      "runs": [
+        {
+          "text": "प्र. 21. हर्यक वंश के संस्थापक बिम्बिसार मगध की गद्दी पर कब बैठे?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_57",
+      "type": "option",
+      "rawText": "(A) 544 ई.पू.\t\t(B) 392 ई.पू.",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 544 ई.पू.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t(B) 392 ई.पू.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "544 ई.पू."
+        },
+        {
+          "label": "B",
+          "text": "392 ई.पू."
+        }
+      ]
+    },
+    {
+      "id": "b_58",
+      "type": "option",
+      "rawText": "(C) 432 ई.पू.\t\t(D) 832 ई.पू.",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) 432 ई.पू.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t(D) 832 ई.पू.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "432 ई.पू."
+        },
+        {
+          "label": "D",
+          "text": "832 ई.पू."
+        }
+      ]
+    },
+    {
+      "id": "b_59",
+      "type": "question",
+      "rawText": "प्र. 22. चंद्रगुप्त मौर्य को जस्टिन ने ...... कहा था?",
+      "questionNumber": "22",
+      "runs": [
+        {
+          "text": "प्र. 22. चंद्रगुप्त मौर्य को जस्टिन ने ...... कहा था?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_60",
+      "type": "option",
+      "rawText": "(A) वृषल(B) राजा(C) सैंड्रोकोट्स(D) सेल्युक्स",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) वृषल",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) राजा",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C) सैंड्रोकोट्स",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) सेल्युक्स",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "वृषल"
+        },
+        {
+          "label": "B",
+          "text": "राजा"
+        },
+        {
+          "label": "C",
+          "text": "सैंड्रोकोट्स"
+        },
+        {
+          "label": "D",
+          "text": "सेल्युक्स"
+        }
+      ]
+    },
+    {
+      "id": "b_61",
+      "type": "question",
+      "rawText": "प्र. 23. इंडिका पुस्तक के लेखक कौन थे?",
+      "questionNumber": "23",
+      "runs": [
+        {
+          "text": "प्र. 23. इंडिका पुस्तक के लेखक कौन थे?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_62",
+      "type": "option",
+      "rawText": "(A) टॉमी\t(B) मेगस्थनीज",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) टॉमी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) मेगस्थनीज",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "टॉमी"
+        },
+        {
+          "label": "B",
+          "text": "मेगस्थनीज"
+        }
+      ]
+    },
+    {
+      "id": "b_63",
+      "type": "option",
+      "rawText": "(C) फाहियान(D) प्लिनी",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) फाहियान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "D) प्लिनी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "फाहियान"
+        },
+        {
+          "label": "D",
+          "text": "प्लिनी"
+        }
+      ]
+    },
+    {
+      "id": "b_64",
+      "type": "question",
+      "rawText": "प्र. 24. ऋग्वेद में कितने सूक्त हैं?",
+      "questionNumber": "24",
+      "runs": [
+        {
+          "text": "प्र. 24. ऋग्वेद में कितने सूक्त हैं?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_65",
+      "type": "option",
+      "rawText": "(A) 1028(B) 1058(C) 10(D) 1208",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 1028",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) 1058",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C) 10",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) 1208",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "1028"
+        },
+        {
+          "label": "B",
+          "text": "1058"
+        },
+        {
+          "label": "C",
+          "text": "10"
+        },
+        {
+          "label": "D",
+          "text": "1208"
+        }
+      ]
+    },
+    {
+      "id": "b_66",
+      "type": "question",
+      "rawText": "प्र. 25. सूर्य के सबसे निकट का कौन सा ग्रह स्थित है?",
+      "questionNumber": "25",
+      "runs": [
+        {
+          "text": "प्र. 25. सूर्य के सबसे निकट का कौन सा ग्रह स्थित है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_67",
+      "type": "option",
+      "rawText": "(A) पृथ्वी(B) बुध(C) शुक्र(D) मंगल",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) पृथ्वी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) बुध",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C) शुक्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) मंगल",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "पृथ्वी"
+        },
+        {
+          "label": "B",
+          "text": "बुध"
+        },
+        {
+          "label": "C",
+          "text": "शुक्र"
+        },
+        {
+          "label": "D",
+          "text": "मंगल"
+        }
+      ]
+    },
+    {
+      "id": "b_68",
+      "type": "question",
+      "rawText": "प्र. 26. क्षेत्रफल की दृष्टि से विश्व का सबसे बड़ा महासागर कौन सा है?",
+      "questionNumber": "26",
+      "runs": [
+        {
+          "text": "प्र. 26. क्षेत्रफल की दृष्टि से विश्व का सबसे बड़ा महासागर कौन सा है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_69",
+      "type": "option",
+      "rawText": "(A) अटलांटिक महासागर(B) हिंद महासागर",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) अटलांटिक महासागर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) हिंद महासागर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "अटलांटिक महासागर"
+        },
+        {
+          "label": "B",
+          "text": "हिंद महासागर"
+        }
+      ]
+    },
+    {
+      "id": "b_70",
+      "type": "option",
+      "rawText": "(C) प्रशांत महासागर(D) आर्कटिक महासागर",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) प्रशांत महासागर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) आर्कटिक महासागर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "प्रशांत महासागर"
+        },
+        {
+          "label": "D",
+          "text": "आर्कटिक महासागर"
+        }
+      ]
+    },
+    {
+      "id": "b_71",
+      "type": "empty",
+      "rawText": "",
+      "runs": [],
+      "fontsUsed": [],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_72",
+      "type": "question",
+      "rawText": "प्र. 27. विश्व का सबसे बड़ा द्वीप (Island) कौन सा है?",
+      "questionNumber": "27",
+      "runs": [
+        {
+          "text": "प्र. 27. विश्व का सबसे बड़ा द्वीप (Island) कौन सा है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_73",
+      "type": "option",
+      "rawText": "(A) ग्रीनलैंड\t(B) मेडागास्कर",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) ग्रीनलैंड",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) मेडागास्कर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "ग्रीनलैंड"
+        },
+        {
+          "label": "B",
+          "text": "मेडागास्कर"
+        }
+      ]
+    },
+    {
+      "id": "b_74",
+      "type": "option",
+      "rawText": "(C) न्यूगिनी\t(D) बोर्नियो",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) न्यूगिनी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) बोर्नियो",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "न्यूगिनी"
+        },
+        {
+          "label": "D",
+          "text": "बोर्नियो"
+        }
+      ]
+    },
+    {
+      "id": "b_75",
+      "type": "question",
+      "rawText": "प्र. 28. 'जिम कॉर्बेट राष्ट्रीय उद्यान' किस राज्य में स्थित है?",
+      "questionNumber": "28",
+      "runs": [
+        {
+          "text": "प्र. 28. 'जिम कॉर्बेट राष्ट्रीय उद्यान' किस राज्य में स्थित है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_76",
+      "type": "option",
+      "rawText": "(A) उत्तराखंड\t(B) मध्य प्रदेश",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) उत्तराखंड",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) मध्य प्रदेश",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "उत्तराखंड"
+        },
+        {
+          "label": "B",
+          "text": "मध्य प्रदेश"
+        }
+      ]
+    },
+    {
+      "id": "b_77",
+      "type": "option",
+      "rawText": "(C) असम\t(D) राजस्थान",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) असम",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) राजस्थान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "असम"
+        },
+        {
+          "label": "D",
+          "text": "राजस्थान"
+        }
+      ]
+    },
+    {
+      "id": "b_78",
+      "type": "question",
+      "rawText": "प्र. 29. 'भाखड़ा नांगल बाँध' किस नदी पर और मुख्य रूप से किस राज्य के पास स्थित है?",
+      "questionNumber": "29",
+      "runs": [
+        {
+          "text": "प्र. 29. 'भाखड़ा नांगल बाँध' किस नदी पर और मुख्य रूप से किस राज्य के पास स्थित है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_79",
+      "type": "option",
+      "rawText": "(A) महानदी(B) सतलज नदी",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) महानदी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) सतलज नदी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "महानदी"
+        },
+        {
+          "label": "B",
+          "text": "सतलज नदी"
+        }
+      ]
+    },
+    {
+      "id": "b_80",
+      "type": "option",
+      "rawText": "(C) कावेरी नदी(D) नर्मदा नदी",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) कावेरी नदी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) नर्मदा नदी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "कावेरी नदी"
+        },
+        {
+          "label": "D",
+          "text": "नर्मदा नदी"
+        }
+      ]
+    },
+    {
+      "id": "b_81",
+      "type": "question",
+      "rawText": "प्र. 30. विश्व पर्यावरण दिवस (World Environment Day) कब मनाया जाता है?",
+      "questionNumber": "30",
+      "runs": [
+        {
+          "text": "प्र. 30. विश्व पर्यावरण दिवस (World Environment Day) कब मनाया जाता है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_82",
+      "type": "option",
+      "rawText": "(A) 22 अप्रैल(B) 5 जून",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 22 अप्रैल",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) 5 जून",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "22 अप्रैल"
+        },
+        {
+          "label": "B",
+          "text": "5 जून"
+        }
+      ]
+    },
+    {
+      "id": "b_83",
+      "type": "option",
+      "rawText": "(C) 11 जुलाई(D) 16 सितंबर",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) 11 जुलाई",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) 16 सितंबर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "11 जुलाई"
+        },
+        {
+          "label": "D",
+          "text": "16 सितंबर"
+        }
+      ]
+    },
+    {
+      "id": "b_84",
+      "type": "question",
+      "rawText": "प्र. 31.सरलआवर्तगति(Simple Harmonic Motion)किसविषयकेअंतर्गतआताहै?",
+      "questionNumber": "31",
+      "runs": [
+        {
+          "text": "प्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ". 31.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "सरल",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "आवर्त",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "गति",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "(Simple Harmonic Motion)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "किस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "विषय",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "के",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "अंतर्गत",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "आता",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "है",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_85",
+      "type": "option",
+      "rawText": "(A)भौतिकविज्ञान\t(B)रसायनविज्ञान",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "भौतिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "रसायन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "भौतिकविज्ञान"
+        },
+        {
+          "label": "B",
+          "text": "रसायनविज्ञान"
+        }
+      ]
+    },
+    {
+      "id": "b_86",
+      "type": "option",
+      "rawText": "(C)जीवविज्ञान\t(D)कृषिविज्ञान",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "जीव",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "कृषि",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "जीवविज्ञान"
+        },
+        {
+          "label": "D",
+          "text": "कृषिविज्ञान"
+        }
+      ]
+    },
+    {
+      "id": "b_87",
+      "type": "question",
+      "rawText": "प्र. 32.डॉप्लरप्रभाव(Doppler Effect)विषय-सूचीकेअनुसारकिसभागमेंशामिलहै?",
+      "questionNumber": "32",
+      "runs": [
+        {
+          "text": "प्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ". 32.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "डॉप्लर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "प्रभाव",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "(Doppler Effect)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "विषय",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "-",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "सूची",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "के",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "अनुसार",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "किस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "भाग",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "में",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "शामिल",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "है",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_88",
+      "type": "option",
+      "rawText": "(A)ऊष्मा(B)प्रकाश(C)ध्वनि(D)खगोलीय",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "ऊष्मा",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "प्रकाश",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "ध्वनि",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "खगोलीय",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "ऊष्मा"
+        },
+        {
+          "label": "B",
+          "text": "प्रकाश"
+        },
+        {
+          "label": "C",
+          "text": "ध्वनि"
+        },
+        {
+          "label": "D",
+          "text": "खगोलीय"
+        }
+      ]
+    },
+    {
+      "id": "b_89",
+      "type": "question",
+      "rawText": "प्र. 33.रेडियोसक्रियता(Radioactivity)औरपरमाणुसंरचनाकाअध्ययनरसायनविज्ञानकेकिसभागमेंकियाजाताहै?",
+      "questionNumber": "33",
+      "runs": [
+        {
+          "text": "प्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ". 33.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "रेडियोसक्रियता",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "(Radioactivity)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "और",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "परमाणु",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "संरचना",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "अध्ययन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "रसायन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "के",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "किस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "भाग",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "में",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "किया",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "जाता",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "है",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_90",
+      "type": "option",
+      "rawText": "(A)कार्बनिकरसायन(B)अकार्बनिकरसायन",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "कार्बनिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "रसायन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "अकार्बनिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "रसायन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "कार्बनिकरसायन"
+        },
+        {
+          "label": "B",
+          "text": "अकार्बनिकरसायन"
+        }
+      ]
+    },
+    {
+      "id": "b_91",
+      "type": "option",
+      "rawText": "(C)भौतिकरसायन(D)विविधरसायन",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "भौतिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "रसायन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विविध",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "रसायन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "भौतिकरसायन"
+        },
+        {
+          "label": "D",
+          "text": "विविधरसायन"
+        }
+      ]
+    },
+    {
+      "id": "b_92",
+      "type": "question",
+      "rawText": "प्र. 34.हाइड्रोकार्बनऔरऐल्कोहॉलसम्बंधीशब्दावलीकिसशाखाकाभागहै?",
+      "questionNumber": "34",
+      "runs": [
+        {
+          "text": "प्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ". 34.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "हाइड्रोकार्बन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "और",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "ऐल्कोहॉल",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "सम्बंधी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "शब्दावली",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "किस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "शाखा",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "भाग",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "है",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_93",
+      "type": "option",
+      "rawText": "(A)भौतिकरसायन(B)कार्बनिकरसायन",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "भौतिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "रसायन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "कार्बनिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "रसायन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "भौतिकरसायन"
+        },
+        {
+          "label": "B",
+          "text": "कार्बनिकरसायन"
+        }
+      ]
+    },
+    {
+      "id": "b_94",
+      "type": "option",
+      "rawText": "(C)अकार्बनिकरसायन(D)कृषिविज्ञान",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "अकार्बनिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "रसायन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "कृषि",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "अकार्बनिकरसायन"
+        },
+        {
+          "label": "D",
+          "text": "कृषिविज्ञान"
+        }
+      ]
+    },
+    {
+      "id": "b_95",
+      "type": "question",
+      "rawText": "प्र. 35.मानवशरीरकेतंत्र(पाचन,श्वसन,उत्सर्जन,तंत्रिकातंत्र)काअध्ययनकिसविषयकेअंतर्गतआताहै?",
+      "questionNumber": "35",
+      "runs": [
+        {
+          "text": "प्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ". 35.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "मानव",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "शरीर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "के",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "तंत्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "(",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "पाचन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ",",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "श्वसन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ",",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "उत्सर्जन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ",",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "तंत्रिका",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "तंत्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ")",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "अध्ययन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "किस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "विषय",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "के",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "अंतर्गत",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "आता",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "है",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_96",
+      "type": "option",
+      "rawText": "(A)जीवविज्ञान\t(B)पशुपालन",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "जीव",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "पशुपालन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "जीवविज्ञान"
+        },
+        {
+          "label": "B",
+          "text": "पशुपालन"
+        }
+      ]
+    },
+    {
+      "id": "b_97",
+      "type": "option",
+      "rawText": "(C)कृषिविज्ञान\t(D)भौतिकविज्ञान",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "कृषि",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "भौतिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "कृषिविज्ञान"
+        },
+        {
+          "label": "D",
+          "text": "भौतिकविज्ञान"
+        }
+      ]
+    },
+    {
+      "id": "b_98",
+      "type": "question",
+      "rawText": "प्र. 36.डायोडवाल्व,ट्रांजिस्टरऔरलेसर(Laser)काअध्ययनभौतिकविज्ञानकेकिसअध्यायमेंआताहै?",
+      "questionNumber": "36",
+      "runs": [
+        {
+          "text": "प्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ". 36.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "डायोड",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "वाल्व",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ",",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "ट्रांजिस्टर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "और",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "लेसर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "(Laser)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "अध्ययन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "भौतिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "विज्ञान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "के",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "किस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "अध्याय",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "में",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "आता",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "है",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_99",
+      "type": "option",
+      "rawText": "(A)प्रकाश\t(B)आधुनिकएवंपरमाणुभौतिकी",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "प्रकाश",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "आधुनिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "एवं",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "परमाणु",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "भौतिकी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "प्रकाश"
+        },
+        {
+          "label": "B",
+          "text": "आधुनिकएवंपरमाणुभौतिकी"
+        }
+      ]
+    },
+    {
+      "id": "b_100",
+      "type": "option",
+      "rawText": "(C)इलेक्ट्रॉनिक\t(D)स्थिरविद्युतिकी",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "इलेक्ट्रॉनिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "स्थिर",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विद्युतिकी",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "इलेक्ट्रॉनिक"
+        },
+        {
+          "label": "D",
+          "text": "स्थिरविद्युतिकी"
+        }
+      ]
+    },
+    {
+      "id": "b_101",
+      "type": "question",
+      "rawText": "प्र. 37.प्रकाशकाअपनेघटकरंगोंमेंविभाजितहोनाक्याकहलाताहै?",
+      "questionNumber": "37",
+      "runs": [
+        {
+          "text": "प्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ". 37.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "प्रकाश",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "अपने",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "घटक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "रंगों",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "में",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "विभाजित",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "होना",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "क्या",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "कहलाता",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "है",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_102",
+      "type": "option",
+      "rawText": "(A)प्रकाशकाअपवर्तन",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "प्रकाश",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "अपवर्तन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "प्रकाशकाअपवर्तन"
+        }
+      ]
+    },
+    {
+      "id": "b_103",
+      "type": "option",
+      "rawText": "(B)प्रकाशकावर्ण-विक्षेपण",
+      "optionLabel": "B",
+      "runs": [
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "प्रकाश",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "वर्ण",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "-",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "विक्षेपण",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "B",
+          "text": "प्रकाशकावर्ण-विक्षेपण"
+        }
+      ]
+    },
+    {
+      "id": "b_104",
+      "type": "option",
+      "rawText": "(C)प्रकाशकापूर्णआंतरिकपरावर्तन",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "प्रकाश",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "पूर्ण",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "आंतरिक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "परावर्तन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "प्रकाशकापूर्णआंतरिकपरावर्तन"
+        }
+      ]
+    },
+    {
+      "id": "b_105",
+      "type": "option",
+      "rawText": "(D)प्रकाशकाव्यतिकरण",
+      "optionLabel": "D",
+      "runs": [
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "प्रकाश",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "व्यतिकरण",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "D",
+          "text": "प्रकाशकाव्यतिकरण"
+        }
+      ]
+    },
+    {
+      "id": "b_106",
+      "type": "question",
+      "rawText": "प्र. 38.पदार्थकीवहअवस्थाजिसकाआकारऔरआयतनदोनोंनिश्चितहोतेहैं,उसेक्याकहतेहैं?",
+      "questionNumber": "38",
+      "runs": [
+        {
+          "text": "प्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ". 38.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "पदार्थ",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "की",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "वह",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "अवस्था",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "जिसका",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "आकार",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "और",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "आयतन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "दोनों",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "निश्चित",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "होते",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "हैं",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ",",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "उसे",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "क्या",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "कहते",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "हैं",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_107",
+      "type": "option",
+      "rawText": "(A)द्रव(B)गैस(C)ठोस(D)प्लाज्मा",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "द्रव",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "गैस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "ठोस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "प्लाज्मा",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "द्रव"
+        },
+        {
+          "label": "B",
+          "text": "गैस"
+        },
+        {
+          "label": "C",
+          "text": "ठोस"
+        },
+        {
+          "label": "D",
+          "text": "प्लाज्मा"
+        }
+      ]
+    },
+    {
+      "id": "b_108",
+      "type": "question",
+      "rawText": "प्र. 39.कोशिका(Cell)कापावरहाउस(ऊर्जागृह)किसेकहाजाताहै?",
+      "questionNumber": "39",
+      "runs": [
+        {
+          "text": "प्र",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ". 39.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "कोशिका",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "(Cell)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "का",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "पावरहाउस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "(",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "ऊर्जा",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "गृह",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ")",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "किसे",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "कहा",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "जाता",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "है",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_109",
+      "type": "option",
+      "rawText": "(A)राइबोसोम\t\t(B)माइटोकॉन्ड्रिया",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "राइबोसोम",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "माइटोकॉन्ड्रिया",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "राइबोसोम"
+        },
+        {
+          "label": "B",
+          "text": "माइटोकॉन्ड्रिया"
+        }
+      ]
+    },
+    {
+      "id": "b_110",
+      "type": "option",
+      "rawText": "(C)केंद्रक\t\t(D)लाइसोसोम",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "केंद्रक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D)",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "लाइसोसोम",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "केंद्रक"
+        },
+        {
+          "label": "D",
+          "text": "लाइसोसोम"
+        }
+      ]
+    },
+    {
+      "id": "b_111",
+      "type": "question",
+      "rawText": "प्र. 40. दूध में पाए जाने वाले मुख्य कार्बोहाइड्रेट या शर्करा को क्या कहते हैं?",
+      "questionNumber": "40",
+      "runs": [
+        {
+          "text": "प्र. 40. दूध में पाए जाने वाले मुख्य कार्बोहाइड्रेट या शर्करा को क्या कहते हैं?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_112",
+      "type": "option",
+      "rawText": "(A) ग्लूकोज\t(B) फ्रुक्टोज",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) ग्लूकोज",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) फ्रुक्टोज",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "ग्लूकोज"
+        },
+        {
+          "label": "B",
+          "text": "फ्रुक्टोज"
+        }
+      ]
+    },
+    {
+      "id": "b_113",
+      "type": "option",
+      "rawText": "(C) लैक्टोज\t(D) सुक्रोज",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) लैक्टोज",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) सुक्रोज",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "लैक्टोज"
+        },
+        {
+          "label": "D",
+          "text": "सुक्रोज"
+        }
+      ]
+    },
+    {
+      "id": "b_114",
+      "type": "question",
+      "rawText": "प्र. 41. सर्वनाम के भेद होते हैं?",
+      "questionNumber": "41",
+      "runs": [
+        {
+          "text": "प्र. 41. सर्वनाम के भेद होते हैं?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_115",
+      "type": "option",
+      "rawText": "(A) 3(B) 4(C) 5(D) 6",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) 3",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) 4",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C) 5",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) 6",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ]
+    },
+    {
+      "id": "b_116",
+      "type": "question",
+      "rawText": "प्र. 42. संबंधवाचक सर्वनाम बताएं?",
+      "questionNumber": "42",
+      "runs": [
+        {
+          "text": "प्र. 42. संबंधवाचक सर्वनाम बताएं?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_117",
+      "type": "option",
+      "rawText": "(A) जो(B) अपना(C) मेरा(D) वह",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) जो",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) अपना",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C) मेरा",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) वह",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "जो"
+        },
+        {
+          "label": "B",
+          "text": "अपना"
+        },
+        {
+          "label": "C",
+          "text": "मेरा"
+        },
+        {
+          "label": "D",
+          "text": "वह"
+        }
+      ]
+    },
+    {
+      "id": "b_118",
+      "type": "question",
+      "rawText": "प्र. 43. 'गांधी जी को राष्ट्रपिता कहा गया' - निम्न पद में संज्ञा का नाम बताइए?",
+      "questionNumber": "43",
+      "runs": [
+        {
+          "text": "प्र. 43. 'गांधी जी को राष्ट्रपिता कहा गया' - निम्न पद में संज्ञा का नाम बताइए?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_119",
+      "type": "option",
+      "rawText": "(A) जातिवाचक\t(B) व्यक्तिवाचक",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) जातिवाचक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) व्यक्तिवाचक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "जातिवाचक"
+        },
+        {
+          "label": "B",
+          "text": "व्यक्तिवाचक"
+        }
+      ]
+    },
+    {
+      "id": "b_120",
+      "type": "option",
+      "rawText": "(C) भाववाचक\t\t(D) अ व ब दोनों",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) भाववाचक",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) अ व ब दोनों",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "भाववाचक"
+        },
+        {
+          "label": "D",
+          "text": "अ व ब दोनों"
+        }
+      ]
+    },
+    {
+      "id": "b_121",
+      "type": "question",
+      "rawText": "प्र. 44. भारत और किस देश ने साझा बौद्ध विरासत तथा प्राचीन पांडुलिपियों के संरक्षण के लिए 'संहिता' (SAMHITA) परियोजना शुरू की है?",
+      "questionNumber": "44",
+      "runs": [
+        {
+          "text": "प्र. 44. भारत और किस देश ने साझा बौद्ध विरासत तथा प्राचीन पांडुलिपियों के संरक्षण के लिए 'संहिता' (SAMHITA) परियोजना शुरू की है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_122",
+      "type": "option",
+      "rawText": "(A) रूस(B) श्रीलंका(C) जापान\t(D) चीन",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) रूस",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) श्रीलंका",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(C) जापान",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) चीन",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "रूस"
+        },
+        {
+          "label": "B",
+          "text": "श्रीलंका"
+        },
+        {
+          "label": "C",
+          "text": "जापान"
+        },
+        {
+          "label": "D",
+          "text": "चीन"
+        }
+      ]
+    },
+    {
+      "id": "b_123",
+      "type": "question",
+      "rawText": "प्र. 45. किस देश ने बंगाल की खाड़ी में विकसित होने वाले चक्रवात को 'अर्नब' (Arnab) नाम दिया है?",
+      "questionNumber": "45",
+      "runs": [
+        {
+          "text": "प्र. 45. किस देश ने बंगाल की खाड़ी में विकसित होने वाले चक्रवात को 'अर्नब' (Arnab) नाम दिया है?",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_124",
+      "type": "option",
+      "rawText": "(A) बांग्लादेश\t(B) श्रीलंका",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) बांग्लादेश",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) श्रीलंका",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "बांग्लादेश"
+        },
+        {
+          "label": "B",
+          "text": "श्रीलंका"
+        }
+      ]
+    },
+    {
+      "id": "b_125",
+      "type": "option",
+      "rawText": "(C) इंडोनेशिया\t(D) संयुक्त राज्य अमेरिका",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) इंडोनेशिया",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "\t",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) संयुक्त राज्य अमेरिका",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "इंडोनेशिया"
+        },
+        {
+          "label": "D",
+          "text": "संयुक्त राज्य अमेरिका"
+        }
+      ]
+    },
+    {
+      "id": "b_126",
+      "type": "instruction",
+      "rawText": "Identify the correct Tense of the following sentences:",
+      "runs": [
+        {
+          "text": "Identify the correct Tense of the following sentences:",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_127",
+      "type": "question",
+      "rawText": "Q. 46. They were licking honey.",
+      "questionNumber": "46",
+      "runs": [
+        {
+          "text": "Q. 46. They were licking honey.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_128",
+      "type": "option",
+      "rawText": "(A) Simple present(B) Past continuous",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) Simple present",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) Past continuous",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "Simple present"
+        },
+        {
+          "label": "B",
+          "text": "Past continuous"
+        }
+      ]
+    },
+    {
+      "id": "b_129",
+      "type": "option",
+      "rawText": "(C) Simple future(D) Present continuous",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) Simple future",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) Present continuous",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "Simple future"
+        },
+        {
+          "label": "D",
+          "text": "Present continuous"
+        }
+      ]
+    },
+    {
+      "id": "b_130",
+      "type": "question",
+      "rawText": "Q. 47. He has developed a factory.",
+      "questionNumber": "47",
+      "runs": [
+        {
+          "text": "Q. 47. He has developed a factory.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_131",
+      "type": "option",
+      "rawText": "(A) Present perfect(B) Simple past",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) Present perfect",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) Simple past",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "Present perfect"
+        },
+        {
+          "label": "B",
+          "text": "Simple past"
+        }
+      ]
+    },
+    {
+      "id": "b_132",
+      "type": "option",
+      "rawText": "(C) Simple future(D) Present continuous",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) Simple future",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) Present continuous",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "Simple future"
+        },
+        {
+          "label": "D",
+          "text": "Present continuous"
+        }
+      ]
+    },
+    {
+      "id": "b_133",
+      "type": "question",
+      "rawText": "Q. 48. Avinash will be replacing a bike.",
+      "questionNumber": "48",
+      "runs": [
+        {
+          "text": "Q. 48. Avinash will be replacing a bike.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_134",
+      "type": "option",
+      "rawText": "(A) Simple present(B) Simple past",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) Simple present",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) Simple past",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "Simple present"
+        },
+        {
+          "label": "B",
+          "text": "Simple past"
+        }
+      ]
+    },
+    {
+      "id": "b_135",
+      "type": "option",
+      "rawText": "(C) Simple future(D) Future continuous",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) Simple future",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) Future continuous",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "Simple future"
+        },
+        {
+          "label": "D",
+          "text": "Future continuous"
+        }
+      ]
+    },
+    {
+      "id": "b_136",
+      "type": "question",
+      "rawText": "Q. 49. She had observed the experiment.",
+      "questionNumber": "49",
+      "runs": [
+        {
+          "text": "Q. 49. She had observed the experiment.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_137",
+      "type": "option",
+      "rawText": "(A) Past perfect(B) Simple past",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) Past perfect",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) Simple past",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "Past perfect"
+        },
+        {
+          "label": "B",
+          "text": "Simple past"
+        }
+      ]
+    },
+    {
+      "id": "b_138",
+      "type": "option",
+      "rawText": "(C) Past continuous",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) Past continuous",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "Past continuous"
+        }
+      ]
+    },
+    {
+      "id": "b_139",
+      "type": "option",
+      "rawText": "(D) Present continuous",
+      "optionLabel": "D",
+      "runs": [
+        {
+          "text": "(D) Present continuous",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "D",
+          "text": "Present continuous"
+        }
+      ]
+    },
+    {
+      "id": "b_140",
+      "type": "question",
+      "rawText": "Q. 50. We shall have written an essay.",
+      "questionNumber": "50",
+      "runs": [
+        {
+          "text": "Q. 50. We shall have written an essay.",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false
+    },
+    {
+      "id": "b_141",
+      "type": "option",
+      "rawText": "(A) Simple present(B) Simple past",
+      "optionLabel": "A",
+      "runs": [
+        {
+          "text": "(A) Simple present",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(B) Simple past",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "A",
+          "text": "Simple present"
+        },
+        {
+          "label": "B",
+          "text": "Simple past"
+        }
+      ]
+    },
+    {
+      "id": "b_142",
+      "type": "option",
+      "rawText": "(C) Future perfect(D) Present continuous",
+      "optionLabel": "C",
+      "runs": [
+        {
+          "text": "(C) Future perfect",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "(D) Present continuous",
+          "fontAscii": "Mangal Pro",
+          "fontCs": "Mangal Pro",
+          "fontHAnsi": "Mangal Pro",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "fontsUsed": [
+        "Mangal Pro"
+      ],
+      "hasDrawing": false,
+      "hasMath": false,
+      "hasShape": false,
+      "inlineOptions": [
+        {
+          "label": "C",
+          "text": "Future perfect"
+        },
+        {
+          "label": "D",
+          "text": "Present continuous"
+        }
+      ]
+    }
+  ]
+}
