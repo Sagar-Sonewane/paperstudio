@@ -213,3 +213,4 @@ Status: ⚠️  LibreOffice command failed or not installed:
 | **1. Paginator** | Multi-column pagination, font shaping, keep-together | **GO** | 40 questions packed into 2 A4 pages without overflow; PDF generated; screenshots verified. | Proceed to Phase 1 foundation and Phase 2 layout engine. |
 | **2. Importer** | DOCX parsing, classification, font inspection | **GO** | 50 questions & 79 options identified from sample; Mangal Pro Unicode confirmed; OMML math extracted. | Build multi-line grouping and review screen in Phase 3. |
 | **3. DOCX Export** | 2-column OpenXML generation, double border, headers | **GO** | A4, 2-column, double border, header/footer, and `w:cs` font slots pass OpenXML verification. | Integrate into Phase 4 export pipeline. |
+

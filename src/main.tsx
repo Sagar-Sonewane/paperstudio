@@ -1,13 +1,8 @@
 import ReactDOM from "react-dom/client";
-
-function App() {
-  return (
-    <div>
-      <h1>PaperStudio</h1>
-      <p>Question paper creator and designer for teachers and coaching institutes.</p>
-    </div>
-  );
-}
+import "@fontsource/noto-sans-devanagari/400.css";
+import "@fontsource/noto-sans-devanagari/700.css";
+import "./index.css";
+import { App } from "./App.tsx";
 
 const rootEl = document.getElementById("root");
 if (rootEl) {

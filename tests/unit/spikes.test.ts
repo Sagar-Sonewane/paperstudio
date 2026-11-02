@@ -47,3 +47,4 @@ describe("Phase 0: Risk Spikes Verification", () => {
     expect(headings.length).toBeGreaterThanOrEqual(3);
   });
 });
+

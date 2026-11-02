@@ -264,3 +264,4 @@ export const BILINGUAL_40_QUESTIONS: PaperItem[] = [
     options: ["(A) Vitamin A / विटामिन A", "(B) Vitamin B / विटामिन B", "(C) Vitamin C / विटामिन C", "(D) Vitamin D / विटामिन D"]
   }
 ];
+

@@ -360,3 +360,4 @@ main().catch((err) => {
   console.error("DOCX spike failed:", err);
   process.exit(1);
 });
+
