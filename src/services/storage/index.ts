@@ -3,5 +3,6 @@ export * from "./errors.ts";
 export * from "./drafts.ts";
 export * from "./media.ts";
 export * from "./templates.ts";
+export * from "./diagrams.ts";
 export * from "./originals.ts";
 

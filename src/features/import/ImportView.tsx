@@ -205,6 +205,7 @@ export function ImportView() {
               content: opt.content
             })),
             mediaIds: item.mediaIds,
+            diagramId: item.diagramId,
             optionLayout: "two-column",
             customNumber: item.number,
             review: {

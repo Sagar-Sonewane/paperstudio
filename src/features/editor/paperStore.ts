@@ -81,6 +81,9 @@ interface PaperStoreState {
   setOptionLayout: (sectionId: string, questionId: string, layout: "auto" | "inline" | "vertical" | "two-column") => void;
   setQuestionMarks: (sectionId: string, questionId: string, marks?: number) => void;
   setCustomNumber: (sectionId: string, questionId: string, customNumber?: string) => void;
+  setQuestionDiagram: (sectionId: string, questionId: string, diagramId?: string) => void;
+  addQuestionMedia: (sectionId: string, questionId: string, mediaId: string) => void;
+  removeQuestionMedia: (sectionId: string, questionId: string, mediaId: string) => void;
 }
 
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
@@ -887,6 +890,84 @@ export const usePaperStore = create<PaperStoreState>((set, get) => {
               items: sec.items.map((item) => {
                 if (item.id !== questionId || item.kind !== "question") return item;
                 return { ...item, customNumber: customNumber?.trim() || undefined };
+              })
+            };
+          }),
+          updatedAt: Date.now()
+        }
+      });
+      triggerDebouncedSave();
+    },
+
+    setQuestionDiagram: (sectionId: string, questionId: string, diagramId?: string) => {
+      const current = get().paper;
+      if (!current) return;
+      recordHistory();
+
+      set({
+        paper: {
+          ...current,
+          sections: current.sections.map((sec) => {
+            if (sec.id !== sectionId) return sec;
+            return {
+              ...sec,
+              items: sec.items.map((item) => {
+                if (item.id !== questionId || item.kind !== "question") return item;
+                return { ...item, diagramId };
+              })
+            };
+          }),
+          updatedAt: Date.now()
+        }
+      });
+      triggerDebouncedSave();
+    },
+
+    addQuestionMedia: (sectionId: string, questionId: string, mediaId: string) => {
+      const current = get().paper;
+      if (!current) return;
+      recordHistory();
+
+      set({
+        paper: {
+          ...current,
+          sections: current.sections.map((sec) => {
+            if (sec.id !== sectionId) return sec;
+            return {
+              ...sec,
+              items: sec.items.map((item) => {
+                if (item.id !== questionId || item.kind !== "question") return item;
+                return {
+                  ...item,
+                  mediaIds: item.mediaIds.includes(mediaId) ? item.mediaIds : [...item.mediaIds, mediaId]
+                };
+              })
+            };
+          }),
+          updatedAt: Date.now()
+        }
+      });
+      triggerDebouncedSave();
+    },
+
+    removeQuestionMedia: (sectionId: string, questionId: string, mediaId: string) => {
+      const current = get().paper;
+      if (!current) return;
+      recordHistory();
+
+      set({
+        paper: {
+          ...current,
+          sections: current.sections.map((sec) => {
+            if (sec.id !== sectionId) return sec;
+            return {
+              ...sec,
+              items: sec.items.map((item) => {
+                if (item.id !== questionId || item.kind !== "question") return item;
+                return {
+                  ...item,
+                  mediaIds: item.mediaIds.filter((m) => m !== mediaId)
+                };
               })
             };
           }),

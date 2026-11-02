@@ -83,10 +83,16 @@ export const DiagramShape = z.object({
   y: z.number(),
   width: z.number().optional(),
   height: z.number().optional(),
+  x2: z.number().optional(),
+  y2: z.number().optional(),
+  points: z.array(z.object({ x: z.number(), y: z.number() })).optional(),
   stroke: z.string().default("#000000"),
   strokeWidth: z.number().default(1),
+  strokeStyle: z.enum(["solid", "dashed"]).default("solid"),
   fill: z.string().default("none"),
   label: z.string().optional(),
+  text: z.string().optional(),
+  fontSize: z.number().optional(),
   // Generic properties dictionary for shape-specific data without using 'any'
   data: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).optional()
 });

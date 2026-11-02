@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   AlertTriangle,
   CheckCircle2,
@@ -7,7 +7,9 @@ import {
   Split,
   Plus,
   X,
-  ImageIcon
+  ImageIcon,
+  Upload,
+  Shapes
 } from "lucide-react";
 import { Button } from "../../components/ui/button.tsx";
 import { Input } from "../../components/ui/input.tsx";
@@ -15,6 +17,8 @@ import { Badge } from "../../components/ui/badge.tsx";
 import type { ReviewItem } from "../../services/import/group.ts";
 import type { QuestionType } from "../../domain/model.ts";
 import { createId } from "../../domain/ids.ts";
+import { DiagramEditorModal } from "../diagram/DiagramEditorModal.tsx";
+import { saveMediaBlob } from "../../services/storage/media.ts";
 
 interface ReviewItemCardProps {
   item: ReviewItem;
@@ -37,6 +41,29 @@ export function ReviewItemCard({
   const [splitDialogOpen, setSplitDialogOpen] = useState(false);
   const [splitText1, setSplitText1] = useState(item.content.plain);
   const [splitText2, setSplitText2] = useState("");
+  const [diagramModalOpen, setDiagramModalOpen] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const hasShapeWarning = item.warnings.some(
+    (w) => w.toLowerCase().includes("shape") || w.toLowerCase().includes("drawing")
+  );
+
+  const handleReplaceImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    try {
+      const mediaId = await saveMediaBlob(file.name, file.type, file);
+      onUpdate({
+        ...item,
+        mediaIds: [...item.mediaIds, mediaId],
+        warnings: item.warnings.filter((w) => !w.toLowerCase().includes("shape"))
+      });
+    } catch (err) {
+      console.error("Failed to replace image:", err);
+    } finally {
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  };
 
   const isLowConfidence = item.confidence < 0.85 || item.warnings.length > 0;
 
@@ -213,15 +240,70 @@ export function ReviewItemCard({
         </div>
       </div>
 
-      {/* Warnings Banner if any */}
-      {item.warnings.length > 0 && (
-        <div className="mt-2.5 p-2 rounded bg-amber-50 border border-amber-200 text-xs text-amber-800 space-y-1">
-          {item.warnings.map((w, wIdx) => (
-            <div key={wIdx} className="flex items-center gap-1.5">
-              <AlertTriangle className="h-3 w-3 text-amber-600 shrink-0" />
-              <span>{w}</span>
+      {/* Word Shape / Drawing Banner with Replace and Redraw Actions */}
+      {hasShapeWarning && (
+        <div className="mt-2.5 p-2.5 rounded-lg border border-amber-300 bg-amber-50/80 space-y-2">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-1.5">
+              <Badge variant="outline" className="text-[10px] border-amber-400 text-amber-900 bg-amber-100 font-medium">
+                Word Shape / Drawing
+              </Badge>
+              <span className="text-xs font-semibold text-amber-900">Non-Vector Placeholder</span>
             </div>
-          ))}
+            <div className="flex items-center gap-1.5">
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*,.svg"
+                onChange={handleReplaceImage}
+                className="hidden"
+              />
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => fileInputRef.current?.click()}
+                className="h-6 text-[11px] px-2 bg-white gap-1"
+                title="Replace with your own PNG, JPG or SVG image"
+              >
+                <Upload className="h-3 w-3" />
+                <span>Replace</span>
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                onClick={() => setDiagramModalOpen(true)}
+                className="h-6 text-[11px] px-2 bg-slate-900 text-white gap-1 hover:bg-slate-800"
+                title="Redraw as clean vector SVG in Diagram Editor"
+              >
+                <Shapes className="h-3 w-3" />
+                <span>Redraw</span>
+              </Button>
+            </div>
+          </div>
+          <p className="text-[11px] text-amber-800 leading-tight">
+            Word drawing/shape detected. Native vector conversion is not supported; Microsoft Word shapes are kept as non-vector placeholders. You can replace with an image or redraw as an SVG diagram.
+          </p>
+          {item.diagramId && (
+            <div className="text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
+              <CheckCircle2 className="h-3 w-3" />
+              <span>Redrawn with clean vector diagram</span>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Warnings Banner if any (non-shape warnings) */}
+      {item.warnings.filter((w) => !w.toLowerCase().includes("shape") && !w.toLowerCase().includes("drawing")).length > 0 && (
+        <div className="mt-2.5 p-2 rounded bg-amber-50 border border-amber-200 text-xs text-amber-800 space-y-1">
+          {item.warnings
+            .filter((w) => !w.toLowerCase().includes("shape") && !w.toLowerCase().includes("drawing"))
+            .map((w, wIdx) => (
+              <div key={wIdx} className="flex items-center gap-1.5">
+                <AlertTriangle className="h-3 w-3 text-amber-600 shrink-0" />
+                <span>{w}</span>
+              </div>
+            ))}
         </div>
       )}
 
@@ -332,6 +414,23 @@ export function ReviewItemCard({
             </div>
           </div>
         </div>
+      )}
+
+      {/* Redraw in Diagram Editor Modal */}
+      {diagramModalOpen && (
+        <DiagramEditorModal
+          open={diagramModalOpen}
+          onClose={() => setDiagramModalOpen(false)}
+          questionId={item.id}
+          existingDiagramId={item.diagramId}
+          onSave={(newDiagramId) => {
+            onUpdate({
+              ...item,
+              diagramId: newDiagramId,
+              warnings: item.warnings.filter((w) => !w.toLowerCase().includes("shape"))
+            });
+          }}
+        />
       )}
     </div>
   );

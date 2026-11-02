@@ -10,6 +10,7 @@ export interface ReviewItem {
   content: { html: string; plain: string };
   options: { id: string; label: string; content: { html: string; plain: string } }[];
   mediaIds: string[];
+  diagramId?: string;
   confidence: number;
   warnings: string[];
 }

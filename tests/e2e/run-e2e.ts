@@ -1,10 +1,11 @@
 import { createServer } from "vite";
 import { chromium } from "playwright";
 import path from "node:path";
+import JSZip from "jszip";
 
 async function runE2ETests() {
   console.log(`\n======================================================`);
-  console.log(`   PAPERSTUDIO E2E TESTS (Phase 5: Templates & Settings)`);
+  console.log(`   PAPERSTUDIO E2E TESTS (Phase 6: Diagram Editor)`);
   console.log(`======================================================\n`);
 
   // 1. Start Vite Dev Server on port 5174
@@ -159,7 +160,6 @@ async function runE2ETests() {
     console.log(`  -> Adjusting column settings...`);
     const colSelect = page.locator('select').filter({ hasText: /Columns/i }).first();
     await colSelect.selectOption("1");
-    // Verify preview column layout updated
     await page.waitForTimeout(600);
     console.log(`  ✅ 1-column layout applied.`);
     await colSelect.selectOption("2");
@@ -194,8 +194,55 @@ async function runE2ETests() {
     await page.waitForSelector('text="Layout & Design Settings"', { state: "detached", timeout: 5000 });
     console.log(`✅ Settings Panel Drawer closed.`);
 
-    // Step 11: Open Pre-Export Validation Modal via "Export DOCX"
-    console.log(`\n[E2E Step 11] Opening Pre-Export Validation Dialog via 'Export DOCX' button`);
+    // Step 11: Phase 6 - SVG Diagram Editor (Draw Triangle with Labels & Insert)
+    console.log(`\n[E2E Step 11] Phase 6: Testing Diagram Editor: Draw triangle with labels and insert into question`);
+    // Open Question Editor for the first question
+    const editQuestionBtn = page.locator('button[title="Edit Question"]').first();
+    await editQuestionBtn.click();
+    await page.waitForSelector('text="Diagrams & Visuals"', { timeout: 5000 });
+    console.log(`  ✅ Question editor drawer opened.`);
+
+    // Open Diagram Editor Modal
+    const drawDiagramBtn = page.getByRole("button", { name: "Draw Diagram" });
+    await drawDiagramBtn.click();
+    await page.waitForSelector('text="Bilingual SVG Diagram Editor"', { timeout: 5000 });
+    console.log(`  ✅ SVG Diagram Editor modal opened.`);
+
+    // Click "Triangle Δ" preset to draw a labelled triangle
+    const trianglePresetBtn = page.getByRole("button", { name: "Triangle Δ" });
+    await trianglePresetBtn.click();
+    await page.waitForSelector('svg polygon', { timeout: 5000 });
+    console.log(`  ✅ Triangle preset with vertex labels drawn onto SVG canvas.`);
+
+    // Click "Insert into Question"
+    const insertDiagramBtn = page.getByRole("button", { name: /Insert into Question/i });
+    await insertDiagramBtn.click();
+    await page.waitForSelector('text="Bilingual SVG Diagram Editor"', { state: "detached", timeout: 5000 });
+    console.log(`  ✅ Diagram saved and inserted into question.`);
+
+    // Verify Question Editor drawer shows the Vector SVG badge
+    await page.waitForSelector('text="Vector SVG"', { timeout: 5000 });
+    console.log(`  ✅ Question editor displays Vector SVG confirmation badge.`);
+
+    // Close Question Editor
+    const doneEditingBtn = page.getByRole("button", { name: "Done Editing" });
+    await doneEditingBtn.click();
+    console.log(`  ✅ Question editor drawer closed.`);
+
+    // Verify SVG diagram appears sharply in center Live Preview
+    await page.waitForSelector('.question-diagram-container svg', { timeout: 10000 });
+    const isSvgInPreview = await page.locator('.question-diagram-container svg').first().isVisible();
+    if (!isSvgInPreview) {
+      throw new Error("Expected vector SVG diagram to be visible in Live Preview");
+    }
+    console.log(`  ✅ Vector SVG diagram rendered sharply in Live Preview!`);
+
+    // Verify Sidebar has Diagram badge
+    await page.getByText("Diagram", { exact: false }).first().waitFor({ timeout: 5000 });
+    console.log(`  ✅ Content sidebar displays 'Diagram' badge for question.`);
+
+    // Step 12: Open Pre-Export Validation Modal via "Export DOCX"
+    console.log(`\n[E2E Step 12] Opening Pre-Export Validation Dialog via 'Export DOCX' button`);
     const exportDocxBtn = page.getByRole("button", { name: /Export DOCX/i }).first();
     await exportDocxBtn.click();
 
@@ -203,8 +250,8 @@ async function runE2ETests() {
     await page.waitForSelector('text="Export & Print Paper"', { timeout: 5000 });
     console.log(`✅ Export modal displayed with pre-export checks.`);
 
-    // Step 12: Trigger DOCX Export Download
-    console.log(`\n[E2E Step 12] Triggering DOCX export download`);
+    // Step 13: Trigger DOCX Export Download & Validate Embedded Diagram
+    console.log(`\n[E2E Step 13] Triggering DOCX export download and validating embedded diagram`);
     const downloadPromise = page.waitForEvent("download", { timeout: 15000 });
     const modalExportBtn = page.getByRole("dialog").getByRole("button", { name: /Export DOCX/i });
     await modalExportBtn.click();
@@ -216,11 +263,26 @@ async function runE2ETests() {
       throw new Error(`Expected downloaded file to end with .docx, got: ${downloadName}`);
     }
 
+    // Inspect the downloaded DOCX file stream to verify embedded drawing
+    const downloadStream = await download.createReadStream();
+    const chunks: Buffer[] = [];
+    for await (const chunk of downloadStream) {
+      chunks.push(chunk as Buffer);
+    }
+    const docxBuffer = Buffer.concat(chunks);
+    const zip = await JSZip.loadAsync(docxBuffer);
+    const documentXml = await zip.file("word/document.xml")?.async("string");
+
+    if (!documentXml?.includes("w:drawing")) {
+      throw new Error("Expected exported DOCX to contain embedded w:drawing for rasterized diagram");
+    }
+    console.log(`✅ Verified exported DOCX contains embedded rasterized diagram (w:drawing).`);
+
     await page.waitForSelector('text=Export successful!', { timeout: 5000 });
     console.log(`✅ Export success feedback reported.`);
 
-    // Step 13: Switch to Print/PDF Tab in Modal
-    console.log(`\n[E2E Step 13] Testing Print / PDF tab inside Export Modal`);
+    // Step 14: Switch to Print/PDF Tab in Modal
+    console.log(`\n[E2E Step 14] Testing Print / PDF tab inside Export Modal`);
     const printTabBtn = page.getByRole("dialog").getByRole("button", { name: /Print \/ PDF/i });
     await printTabBtn.click();
 
@@ -235,8 +297,8 @@ async function runE2ETests() {
     await closeBtn.click();
     console.log(`✅ Export modal closed.`);
 
-    // Step 14: Dedicated Print Route (/paper/:id/print)
-    console.log(`\n[E2E Step 14] Navigating to dedicated print route: /paper/${paperId}/print`);
+    // Step 15: Dedicated Print Route (/paper/:id/print) & Vector Sharpness
+    console.log(`\n[E2E Step 15] Navigating to dedicated print route: /paper/${paperId}/print`);
     await page.goto(`${baseUrl}/paper/${paperId}/print`, { waitUntil: "networkidle" });
     await page.waitForSelector('.print-page', { timeout: 10000 });
 
@@ -246,6 +308,13 @@ async function runE2ETests() {
       throw new Error(`Expected at least 1 print page, got ${printPageCount}`);
     }
 
+    // Verify vector SVG diagram is embedded and visible in print route
+    const printDiagramVisible = await page.locator('.print-page .question-diagram-container svg').first().isVisible();
+    if (!printDiagramVisible) {
+      throw new Error("Expected vector SVG diagram to be visible in dedicated print view");
+    }
+    console.log(`✅ Vector SVG diagram is present and vector-sharp in printable view.`);
+
     // Verify print dialog action button exists
     const printViewBtn = page.getByRole("button", { name: /Open Print Dialog/i });
     await printViewBtn.click();
@@ -253,7 +322,7 @@ async function runE2ETests() {
     console.log(`✅ Verified print route 'Open Print Dialog' action button.`);
 
     console.log(`\n======================================================`);
-    console.log(`   🎉 ALL PHASE 5 E2E TESTS PASSED SUCCESSFULLY!`);
+    console.log(`   🎉 ALL PHASE 6 E2E TESTS PASSED SUCCESSFULLY!`);
     console.log(`======================================================\n`);
   } finally {
     await browser.close();

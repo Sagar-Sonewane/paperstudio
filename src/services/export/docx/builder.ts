@@ -120,17 +120,21 @@ export async function buildDocxDocument(
   }
 
   // Diagram helper function
-  async function resolveDiagram(diagramId: string): Promise<Uint8Array | null> {
+  async function resolveDiagram(
+    diagramId: string
+  ): Promise<{ bytes: Uint8Array; width: number; height: number } | null> {
     if (options.diagramResolver) {
       const res = await options.diagramResolver(diagramId);
       if (res) {
-        return await rasterizeSvgToPng(res.svg, res.width, res.height, 3);
+        const bytes = await rasterizeSvgToPng(res.svg, res.width, res.height, 3);
+        return { bytes, width: res.width, height: res.height };
       }
     }
     try {
       const rec = await db.diagrams.get(diagramId);
       if (rec && rec.svg) {
-        return await rasterizeSvgToPng(rec.svg, rec.width, rec.height, 3);
+        const bytes = await rasterizeSvgToPng(rec.svg, rec.width, rec.height, 3);
+        return { bytes, width: rec.width, height: rec.height };
       }
     } catch (e) {
       // Storage fallback
@@ -254,9 +258,14 @@ export async function buildDocxDocument(
 
         // Attached Diagram
         if (item.diagramId) {
-          const pngBytes = await resolveDiagram(item.diagramId);
-          if (pngBytes) {
-            children.push(createImageParagraph(pngBytes));
+          const diagramPayload = await resolveDiagram(item.diagramId);
+          if (diagramPayload) {
+            children.push(
+              createImageParagraph(diagramPayload.bytes, {
+                originalWidth: diagramPayload.width,
+                originalHeight: diagramPayload.height
+              })
+            );
           }
         }
 

@@ -2,11 +2,14 @@ import { calcDimensions, type LayoutBlock, type PageLayout, type ColumnLayout } 
 import { measureBlockHeight } from "./measure.ts";
 import { deriveQuestionNumbers, formatQuestionNumber, getOptionLabel } from "../../domain/numbering.ts";
 import type { PaperType } from "../../domain/model.ts";
+import { db } from "../storage/db.ts";
 
 function generateBlockHtml(
   block: Omit<LayoutBlock, "heightPx">,
   optionLayoutDefault = "two-column",
-  templateId = "classic-coaching"
+  templateId = "classic-coaching",
+  diagramSvgMap?: Map<string, string>,
+  mediaUrlMap?: Map<string, string>
 ): string {
   if (block.kind === "heading") {
     if (templateId === "clean-professional") {
@@ -33,6 +36,21 @@ function generateBlockHtml(
   const qNum = block.derivedNumber ? formatQuestionNumber(block.derivedNumber) : "";
   const stem = `<div class="question-stem" style="font-weight: 700; margin-bottom: 4px; text-align: justify;"><span class="q-num">${qNum} </span>${item.content.html || item.content.plain || ""}</div>`;
 
+  let diagramHtml = "";
+  if (item.diagramId && diagramSvgMap?.has(item.diagramId)) {
+    const rawSvg = diagramSvgMap.get(item.diagramId)!;
+    diagramHtml = `<div class="question-diagram-container" data-diagram-id="${item.diagramId}" style="display: flex; justify-content: center; align-items: center; margin: 6px auto; max-width: 100%; overflow: hidden;">${rawSvg}</div>`;
+  }
+
+  let mediaHtml = "";
+  if (item.mediaIds && item.mediaIds.length > 0 && mediaUrlMap) {
+    for (const mId of item.mediaIds) {
+      if (mediaUrlMap.has(mId)) {
+        mediaHtml += `<div class="question-media-container" data-media-id="${mId}" style="text-align: center; margin: 4px auto;"><img src="${mediaUrlMap.get(mId)}" style="max-width: 85%; max-height: 140px; object-fit: contain; margin: 0 auto; display: block;" /></div>`;
+      }
+    }
+  }
+
   let optionsHtml = "";
   if (item.options && item.options.length > 0) {
     const layout = item.optionLayout === "auto" ? optionLayoutDefault : item.optionLayout;
@@ -52,16 +70,19 @@ function generateBlockHtml(
     }
   }
 
-  return `<div class="block-question" data-block-id="${block.id}" data-item-id="${item.id}" style="margin-bottom: 8px; page-break-inside: avoid; break-inside: avoid;">${stem}${optionsHtml}</div>`;
+  return `<div class="block-question" data-block-id="${block.id}" data-item-id="${item.id}" style="margin-bottom: 8px; page-break-inside: avoid; break-inside: avoid;">${stem}${diagramHtml}${mediaHtml}${optionsHtml}</div>`;
 }
 
 /**
  * Packs paper into multi-column A4 pages enforcing:
- * - Keep-Together: Question stem and options stay in one column.
+ * - Keep-Together: Question stem, diagrams, and options stay in one column.
  * - Keep-With-Next: Headings never sit alone at column bottoms.
  * - Oversized Detection: Emits warning if a single block exceeds column height.
  */
-export async function paginatePaper(paper: PaperType): Promise<{
+export async function paginatePaper(
+  paper: PaperType,
+  customDiagrams?: Map<string, string>
+): Promise<{
   pages: PageLayout[];
   warnings: string[];
   dimensions: ReturnType<typeof calcDimensions>;
@@ -69,6 +90,45 @@ export async function paginatePaper(paper: PaperType): Promise<{
   const dimensions = calcDimensions(paper.settings);
   const derivedNumbers = deriveQuestionNumbers(paper.sections);
   const warnings: string[] = [];
+
+  // Pre-load diagram SVGs and media URLs
+  const diagramSvgMap = new Map<string, string>();
+  const mediaUrlMap = new Map<string, string>();
+
+  if (customDiagrams) {
+    for (const [dId, svg] of customDiagrams.entries()) {
+      diagramSvgMap.set(dId, svg);
+    }
+  }
+
+  for (const section of paper.sections) {
+    for (const item of section.items) {
+      if (item.kind === "question") {
+        if (item.diagramId && !diagramSvgMap.has(item.diagramId)) {
+          try {
+            const rec = await db.diagrams.get(item.diagramId);
+            if (rec?.svg) {
+              diagramSvgMap.set(item.diagramId, rec.svg);
+            }
+          } catch {
+            // Storage fallback
+          }
+        }
+        for (const mId of item.mediaIds) {
+          if (!mediaUrlMap.has(mId)) {
+            try {
+              const mRec = await db.media.get(mId);
+              if (mRec?.blob && typeof window !== "undefined" && typeof URL !== "undefined") {
+                mediaUrlMap.set(mId, URL.createObjectURL(mRec.blob));
+              }
+            } catch {
+              // Storage fallback
+            }
+          }
+        }
+      }
+    }
+  }
 
   // 1. Flatten items to layout blocks
   const unmeasuredBlocks: Omit<LayoutBlock, "heightPx">[] = [];
@@ -124,7 +184,9 @@ export async function paginatePaper(paper: PaperType): Promise<{
     const fullHtml = generateBlockHtml(
       unmeasured,
       paper.settings.questions.optionLayout,
-      paper.templateId
+      paper.templateId,
+      diagramSvgMap,
+      mediaUrlMap
     );
     const heightPx = await measureBlockHeight(
       { ...unmeasured, html: fullHtml, heightPx: 0 },

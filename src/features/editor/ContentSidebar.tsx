@@ -130,6 +130,16 @@ function SortableItemCard({
                     {item.options.length} opt
                   </span>
                 )}
+                {item.diagramId && (
+                  <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4 text-blue-700 bg-blue-50 border border-blue-200">
+                    Diagram
+                  </Badge>
+                )}
+                {item.mediaIds && item.mediaIds.length > 0 && (
+                  <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4 text-slate-600 bg-slate-100">
+                    {item.mediaIds.length} img
+                  </Badge>
+                )}
               </>
             )}
 
