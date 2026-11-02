@@ -10,26 +10,25 @@ import {
   Undo2,
   Redo2,
   Settings,
-  Calendar,
-  Award,
-  Clock,
-  School,
   Columns,
   List,
   Edit3,
   Download,
-  Printer
+  Printer,
+  LayoutTemplate
 } from "lucide-react";
 import { Button } from "../../components/ui/button.tsx";
 import { Input } from "../../components/ui/input.tsx";
 import { Card } from "../../components/ui/card.tsx";
-import { Modal, ConfirmDialog } from "../../components/ui/dialog.tsx";
+import { ConfirmDialog } from "../../components/ui/dialog.tsx";
 import { usePaperStore } from "./paperStore.ts";
 import { duplicatePaper, deletePaper } from "../../services/storage/drafts.ts";
 import { ContentSidebar } from "./ContentSidebar.tsx";
 import { LivePreview } from "./LivePreview.tsx";
 import { QuestionEditorDrawer } from "./QuestionEditorDrawer.tsx";
+import { SettingsPanelDrawer } from "./SettingsPanelDrawer.tsx";
 import { ExportModal } from "../export/ExportModal.tsx";
+import { TemplateGalleryModal } from "../templates/TemplateGalleryModal.tsx";
 
 export function PaperEditorView() {
   const { id } = useParams<{ id: string }>();
@@ -40,7 +39,6 @@ export function PaperEditorView() {
     isLoading,
     loadError,
     saveStatus,
-    saveError,
     canUndo,
     canRedo,
     undo,
@@ -48,18 +46,16 @@ export function PaperEditorView() {
     activeDrawer,
     selectItem,
     openQuestionEditor,
+    openSettingsDrawer,
+    closeDrawer,
     loadPaper,
     updateTitle,
-    updateInstituteName,
-    updateExamName,
-    updateTotalMarks,
-    updateDuration,
     saveNow,
     reset
   } = usePaperStore();
 
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
-  const [settingsModalOpen, setSettingsModalOpen] = useState(false);
+  const [templateGalleryOpen, setTemplateGalleryOpen] = useState(false);
   const [exportModalOpen, setExportModalOpen] = useState(false);
   const [exportModalMode, setExportModalMode] = useState<"docx" | "pdf">("docx");
   const [localTitle, setLocalTitle] = useState("");
@@ -85,7 +81,7 @@ export function PaperEditorView() {
 
   // Switch mobile tab to drawer when drawer opens
   useEffect(() => {
-    if (activeDrawer === "question_editor") {
+    if (activeDrawer !== "none") {
       setMobileTab("drawer");
     }
   }, [activeDrawer]);
@@ -313,15 +309,33 @@ export function PaperEditorView() {
 
           <div className="h-4 w-px bg-slate-200 mx-0.5 hidden sm:block" />
 
-          {/* Paper Settings */}
+          {/* Templates Gallery Button */}
           <Button
             variant="outline"
             size="sm"
-            onClick={() => setSettingsModalOpen(true)}
-            className="h-8 text-xs text-slate-700"
-            title="Configure Paper Header & Meta"
+            onClick={() => setTemplateGalleryOpen(true)}
+            className="h-8 text-xs text-slate-700 font-semibold gap-1.5"
+            title="Choose a Template Design"
           >
-            <Settings className="h-3.5 w-3.5 sm:mr-1.5" />
+            <LayoutTemplate className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">Templates</span>
+          </Button>
+
+          {/* Paper Settings Panel Drawer Button */}
+          <Button
+            variant={activeDrawer === "settings" ? "secondary" : "outline"}
+            size="sm"
+            onClick={() => {
+              if (activeDrawer === "settings") {
+                closeDrawer();
+              } else {
+                openSettingsDrawer();
+              }
+            }}
+            className="h-8 text-xs text-slate-700 font-semibold gap-1.5"
+            title="Configure Page Setup, Typography & Styling"
+          >
+            <Settings className="h-3.5 w-3.5" />
             <span className="hidden sm:inline">Settings</span>
           </Button>
 
@@ -373,7 +387,7 @@ export function PaperEditorView() {
           <Columns className="h-3 w-3 inline mr-1" />
           Preview
         </button>
-        {activeDrawer === "question_editor" && (
+        {activeDrawer !== "none" && (
           <button
             type="button"
             onClick={() => setMobileTab("drawer")}
@@ -381,8 +395,17 @@ export function PaperEditorView() {
               mobileTab === "drawer" ? "bg-blue-600 text-white" : "text-slate-600 hover:bg-slate-100"
             }`}
           >
-            <Edit3 className="h-3 w-3 inline mr-1" />
-            Editor
+            {activeDrawer === "settings" ? (
+              <>
+                <Settings className="h-3 w-3 inline mr-1" />
+                Settings
+              </>
+            ) : (
+              <>
+                <Edit3 className="h-3 w-3 inline mr-1" />
+                Editor
+              </>
+            )}
           </button>
         )}
       </div>
@@ -413,7 +436,7 @@ export function PaperEditorView() {
           />
         </div>
 
-        {/* Right Area: Question Editor Drawer */}
+        {/* Right Area: Question Editor Drawer or Settings Panel */}
         {activeDrawer === "question_editor" && (
           <div
             className={`w-full md:w-[420px] shrink-0 h-full z-20 transition-all ${
@@ -423,97 +446,22 @@ export function PaperEditorView() {
             <QuestionEditorDrawer />
           </div>
         )}
+        {activeDrawer === "settings" && (
+          <div
+            className={`w-full md:w-[420px] shrink-0 h-full z-20 transition-all ${
+              mobileTab === "drawer" ? "block" : "hidden md:block"
+            }`}
+          >
+            <SettingsPanelDrawer />
+          </div>
+        )}
       </div>
 
-      {/* Paper Metadata & Header Settings Modal */}
-      <Modal
-        open={settingsModalOpen}
-        onClose={() => setSettingsModalOpen(false)}
-        title="Paper Settings & Header Details"
-        description="Configure institute name, exam title, duration and marks for the header."
-      >
-        <div className="space-y-4 pt-2">
-          {saveError && (
-            <div className="p-2 rounded bg-red-50 text-red-700 text-xs flex items-center gap-1.5 border border-red-200">
-              <AlertCircle className="h-4 w-4 shrink-0" />
-              <span>{saveError}</span>
-            </div>
-          )}
-
-          <div>
-            <label className="text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
-              <School className="h-3.5 w-3.5" /> Institute / Coaching Name
-            </label>
-            <Input
-              value={paper.settings.header.instituteName || ""}
-              onChange={(e) => updateInstituteName(e.target.value)}
-              placeholder="e.g. EXCELLENCE COACHING ACADEMY"
-              className="text-xs"
-            />
-          </div>
-
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
-                <Award className="h-3.5 w-3.5" /> Exam Name
-              </label>
-              <Input
-                value={paper.meta.examName || ""}
-                onChange={(e) => updateExamName(e.target.value)}
-                placeholder="e.g. Weekly Mock Test - 01"
-                className="text-xs"
-              />
-            </div>
-
-            <div>
-              <label className="text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
-                <Calendar className="h-3.5 w-3.5" /> Exam Date
-              </label>
-              <Input
-                value={paper.meta.date || ""}
-                readOnly
-                className="text-xs bg-slate-50 text-slate-500"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
-                <CheckCircle2 className="h-3.5 w-3.5" /> Total Marks
-              </label>
-              <Input
-                type="number"
-                value={paper.meta.totalMarks || 0}
-                onChange={(e) => updateTotalMarks(Number(e.target.value))}
-                min={1}
-                max={500}
-                className="text-xs"
-              />
-            </div>
-
-            <div>
-              <label className="text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5" /> Duration (Minutes)
-              </label>
-              <Input
-                type="number"
-                value={paper.meta.durationMin || 0}
-                onChange={(e) => updateDuration(Number(e.target.value))}
-                min={10}
-                max={300}
-                className="text-xs"
-              />
-            </div>
-          </div>
-
-          <div className="pt-3 flex justify-end">
-            <Button size="sm" onClick={() => setSettingsModalOpen(false)}>
-              Save Settings
-            </Button>
-          </div>
-        </div>
-      </Modal>
+      {/* Template Gallery Modal */}
+      <TemplateGalleryModal
+        open={templateGalleryOpen}
+        onClose={() => setTemplateGalleryOpen(false)}
+      />
 
       {/* Delete Draft Confirmation Dialog */}
       <ConfirmDialog

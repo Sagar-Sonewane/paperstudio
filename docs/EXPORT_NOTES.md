@@ -82,3 +82,4 @@ Per PaperStudio's core architectural rules:
   1. No clipping of double borders.
   2. No extra trailing blank page in Chrome, Edge, or Safari print dialogs.
   3. Strict adherence to the honesty rule: the UI and logs explicitly state "print dialog opened", never that a PDF was directly downloaded.
+

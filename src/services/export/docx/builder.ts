@@ -5,16 +5,14 @@ import {
   TextRun,
   Header,
   Footer,
-  PageNumber,
   AlignmentType,
-  PageOrientation,
-  BorderStyle,
-  PageBorderOffsetFrom
+  PageOrientation
 } from "docx";
 import type { PaperType } from "../../../domain/model.ts";
 import { deriveQuestionNumbers, formatQuestionNumber, getOptionLabel } from "../../../domain/numbering.ts";
 import { htmlToTextRuns } from "./richText.ts";
 import { createImageParagraph, rasterizeSvgToPng, type MediaImagePayload } from "./images.ts";
+import { getDocxTemplateHooks } from "./templates.ts";
 import { getMediaBlob } from "../../storage/media.ts";
 import { db } from "../../storage/db.ts";
 
@@ -60,7 +58,7 @@ export async function buildDocxDocument(
   paper: PaperType,
   options: DocxBuildOptions = {}
 ): Promise<Document> {
-  const { settings, meta } = paper;
+  const { settings } = paper;
 
   // 1. Typography & Font Configuration
   const latinFont = resolveLatinFont(settings.typography.fontFamily);
@@ -91,141 +89,13 @@ export async function buildDocxDocument(
   const columnCount = settings.columns.count ?? 2;
   const columnGapTwips = Math.round((settings.columns.gapMm ?? 10) * 56.7);
 
-  // 4. Page Borders Setup
-  let pageBorderConfig: any = undefined;
-  if (settings.border.style === "double") {
-    pageBorderConfig = {
-      pageBorders: {
-        offsetFrom: PageBorderOffsetFrom.PAGE
-      },
-      pageBorderTop: { style: BorderStyle.DOUBLE, size: 24, space: 16, color: "000000" },
-      pageBorderRight: { style: BorderStyle.DOUBLE, size: 24, space: 16, color: "000000" },
-      pageBorderBottom: { style: BorderStyle.DOUBLE, size: 24, space: 16, color: "000000" },
-      pageBorderLeft: { style: BorderStyle.DOUBLE, size: 24, space: 16, color: "000000" }
-    };
-  } else if (settings.border.style === "single") {
-    pageBorderConfig = {
-      pageBorders: {
-        offsetFrom: PageBorderOffsetFrom.PAGE
-      },
-      pageBorderTop: { style: BorderStyle.SINGLE, size: 12, space: 16, color: "000000" },
-      pageBorderRight: { style: BorderStyle.SINGLE, size: 12, space: 16, color: "000000" },
-      pageBorderBottom: { style: BorderStyle.SINGLE, size: 12, space: 16, color: "000000" },
-      pageBorderLeft: { style: BorderStyle.SINGLE, size: 12, space: 16, color: "000000" }
-    };
-  }
+  // 4. Template Hooks for Header, Footer & Borders
+  const templateHooks = getDocxTemplateHooks(paper.templateId);
+  const pageBorderConfig = templateHooks.getPageBorders(paper);
+  const headerParagraphs = templateHooks.getHeaderParagraphs(paper, latinFont, devanagariFont);
+  const footerChildren = templateHooks.getFooterChildren(paper, latinFont, devanagariFont);
 
-  // 5. Header Paragraphs
-  const headerParagraphs: Paragraph[] = [];
-  const instituteName = settings.header.instituteName || "EXCELLENCE COACHING ACADEMY";
-  const hasInstituteDevanagari = DEVANAGARI_REGEX.test(instituteName);
-
-  headerParagraphs.push(
-    new Paragraph({
-      alignment: AlignmentType.CENTER,
-      spacing: { before: 0, after: 60 },
-      children: [
-        new TextRun({
-          text: instituteName.toUpperCase(),
-          bold: true,
-          size: 26, // 13pt
-          font: {
-            ascii: latinFont,
-            hAnsi: latinFont,
-            cs: devanagariFont,
-            hint: hasInstituteDevanagari ? "cs" : "default"
-          }
-        })
-      ]
-    })
-  );
-
-  // Subtitle / Exam details row
-  const examLineParts: string[] = [];
-  if (meta.examName || paper.title) examLineParts.push(meta.examName || paper.title);
-  if (meta.totalMarks) examLineParts.push(`कुल अंक / Total Marks: ${meta.totalMarks}`);
-  if (meta.durationMin) examLineParts.push(`समय / Time: ${meta.durationMin} Mins`);
-  if (examLineParts.length > 0) {
-    const examLineText = examLineParts.join("   |   ");
-    const hasExamDevanagari = DEVANAGARI_REGEX.test(examLineText);
-    headerParagraphs.push(
-      new Paragraph({
-        alignment: AlignmentType.CENTER,
-        spacing: { before: 0, after: 60 },
-        children: [
-          new TextRun({
-            text: examLineText,
-            size: 18, // 9pt
-            font: {
-              ascii: latinFont,
-              hAnsi: latinFont,
-              cs: devanagariFont,
-              hint: hasExamDevanagari ? "cs" : "default"
-            }
-          })
-        ]
-      })
-    );
-  }
-
-  // Student info fields
-  if (settings.header.fields && settings.header.fields.length > 0) {
-    const fieldParts: string[] = [];
-    if (settings.header.fields.includes("studentName")) {
-      fieldParts.push("विद्यार्थी का नाम / Student Name: __________________________");
-    }
-    if (settings.header.fields.includes("date")) {
-      fieldParts.push(`दिनांक / Date: ${meta.date || "____________"}`);
-    }
-    if (settings.header.fields.includes("guardianSignature")) {
-      fieldParts.push("हस्ताक्षर / Sign: ____________");
-    }
-    const studentLine = fieldParts.join("     ");
-    const hasStudentDevanagari = DEVANAGARI_REGEX.test(studentLine);
-    headerParagraphs.push(
-      new Paragraph({
-        alignment: AlignmentType.CENTER,
-        spacing: { before: 0, after: 140 },
-        children: [
-          new TextRun({
-            text: studentLine,
-            size: 16, // 8pt
-            font: {
-              ascii: latinFont,
-              hAnsi: latinFont,
-              cs: devanagariFont,
-              hint: hasStudentDevanagari ? "cs" : "default"
-            }
-          })
-        ]
-      })
-    );
-  }
-
-  // 6. Running Footer
-  const footerChildren: TextRun[] = [];
-  footerChildren.push(
-    new TextRun({
-      text: "PaperStudio • Classic Series                    Page ",
-      size: 16,
-      font: { ascii: latinFont, hAnsi: latinFont, cs: devanagariFont }
-    }),
-    new TextRun({
-      children: [PageNumber.CURRENT],
-      size: 16
-    }),
-    new TextRun({
-      text: " of ",
-      size: 16,
-      font: { ascii: latinFont, hAnsi: latinFont, cs: devanagariFont }
-    }),
-    new TextRun({
-      children: [PageNumber.TOTAL_PAGES],
-      size: 16
-    })
-  );
-
-  // 7. Body Item Generation
+  // 5. Body Item Generation
   const children: Paragraph[] = [];
   const derivedNumbers = deriveQuestionNumbers(paper.sections);
 
@@ -272,30 +142,14 @@ export async function buildDocxDocument(
     // Section Heading
     if (section.title && section.title.trim() !== "") {
       const titleText = section.title.trim();
-      const hasTitleDev = DEVANAGARI_REGEX.test(titleText);
       children.push(
-        new Paragraph({
-          alignment: AlignmentType.CENTER,
-          spacing: { before: 140, after: 100 },
-          keepNext: true, // Headings never appear alone at column bottom
-          border: {
-            top: { style: BorderStyle.SINGLE, size: 6, color: "000000" },
-            bottom: { style: BorderStyle.SINGLE, size: 6, color: "000000" }
-          },
-          children: [
-            new TextRun({
-              text: titleText,
-              bold: true,
-              size: headingSize,
-              font: {
-                ascii: latinFont,
-                hAnsi: latinFont,
-                cs: devanagariFont,
-                hint: hasTitleDev ? "cs" : "default"
-              }
-            })
-          ]
-        })
+        templateHooks.getSectionHeadingParagraph(
+          titleText,
+          paper,
+          headingSize,
+          latinFont,
+          devanagariFont
+        )
       );
     }
 

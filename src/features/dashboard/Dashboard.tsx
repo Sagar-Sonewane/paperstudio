@@ -28,6 +28,7 @@ import {
 import { createDefaultPaper } from "../../domain/defaults.ts";
 import { savePaper } from "../../services/storage/drafts.ts";
 import { loadDevSamplePaper } from "./devSample.ts";
+import { BUILTIN_TEMPLATES, getBuiltinTemplate } from "../../domain/templates/registry.ts";
 
 export function Dashboard() {
   const navigate = useNavigate();
@@ -69,6 +70,19 @@ export function Dashboard() {
       navigate(`/paper/${newPaper.id}`);
     } catch (err: any) {
       setError(`Failed to create paper: ${err.message}`);
+    }
+  };
+
+  const handleCreateWithTemplate = async (templateId: string) => {
+    try {
+      const tpl = getBuiltinTemplate(templateId);
+      const newPaper = createDefaultPaper(`Untitled (${tpl.name})`);
+      newPaper.templateId = tpl.id;
+      newPaper.settings = JSON.parse(JSON.stringify(tpl.defaults));
+      await savePaper(newPaper);
+      navigate(`/paper/${newPaper.id}`);
+    } catch (err: any) {
+      setError(`Failed to create paper with template: ${err.message}`);
     }
   };
 
@@ -333,53 +347,27 @@ export function Dashboard() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Card className="bg-white">
-              <CardHeader className="p-4">
-                <div className="flex justify-between items-center mb-1">
-                  <h4 className="font-semibold text-sm">Classic</h4>
-                  <Badge variant="outline" className="text-[10px]">Default</Badge>
-                </div>
-                <CardDescription className="text-xs">
-                  2-column dense layout with double page borders and student meta box.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="bg-white opacity-85">
-              <CardHeader className="p-4">
-                <div className="flex justify-between items-center mb-1">
-                  <h4 className="font-semibold text-sm">Professional</h4>
-                  <Badge variant="secondary" className="text-[10px]">Phase 5</Badge>
-                </div>
-                <CardDescription className="text-xs">
-                  Clean serif typography with boxed sections and minimal headers.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="bg-white opacity-85">
-              <CardHeader className="p-4">
-                <div className="flex justify-between items-center mb-1">
-                  <h4 className="font-semibold text-sm">Aptitude</h4>
-                  <Badge variant="secondary" className="text-[10px]">Phase 5</Badge>
-                </div>
-                <CardDescription className="text-xs">
-                  Compact 3-column format optimized for rapid competitive MCQs.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="bg-white opacity-85">
-              <CardHeader className="p-4">
-                <div className="flex justify-between items-center mb-1">
-                  <h4 className="font-semibold text-sm">Academy</h4>
-                  <Badge variant="secondary" className="text-[10px]">Phase 5</Badge>
-                </div>
-                <CardDescription className="text-xs">
-                  Single-column school examination template with ample working space.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            {BUILTIN_TEMPLATES.map((tpl) => (
+              <Card
+                key={tpl.id}
+                onClick={() => handleCreateWithTemplate(tpl.id)}
+                className="bg-white hover:border-blue-400 hover:shadow-md transition-all cursor-pointer group"
+              >
+                <CardHeader className="p-4">
+                  <div className="flex justify-between items-center mb-1">
+                    <h4 className="font-semibold text-sm group-hover:text-blue-600 transition-colors">
+                      {tpl.name}
+                    </h4>
+                    <Badge variant="outline" className="text-[10px] capitalize">
+                      {tpl.category}
+                    </Badge>
+                  </div>
+                  <CardDescription className="text-xs line-clamp-2">
+                    {tpl.description}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
           </div>
         </section>
       </main>

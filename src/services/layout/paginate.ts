@@ -5,9 +5,20 @@ import type { PaperType } from "../../domain/model.ts";
 
 function generateBlockHtml(
   block: Omit<LayoutBlock, "heightPx">,
-  optionLayoutDefault = "two-column"
+  optionLayoutDefault = "two-column",
+  templateId = "classic-coaching"
 ): string {
   if (block.kind === "heading") {
+    if (templateId === "clean-professional") {
+      return `<div class="block-heading" data-block-id="${block.id}" style="font-weight: 700; text-align: left; border-bottom: 2px solid #000; padding: 2px 0 4px 0; margin: 8px 0 6px 0; text-transform: uppercase; font-size: 1.05em;">${block.html}</div>`;
+    }
+    if (templateId === "compact-aptitude") {
+      return `<div class="block-heading" data-block-id="${block.id}" style="font-weight: 700; text-align: center; border-bottom: 1px solid #000; padding: 2px; margin: 4px 0; font-size: 0.9em;">${block.html}</div>`;
+    }
+    if (templateId === "modern-academy") {
+      return `<div class="block-heading" data-block-id="${block.id}" style="font-weight: 700; text-align: center; border: 1.5px solid #000; padding: 3px 6px; margin: 6px 0; background-color: #f8fafc; letter-spacing: 0.5px;">${block.html}</div>`;
+    }
+    // Classic Coaching or default
     return `<div class="block-heading" data-block-id="${block.id}" style="font-weight: 700; text-align: center; border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 4px; margin: 6px 0; background-color: #f8fafc;">${block.html}</div>`;
   }
 
@@ -110,7 +121,11 @@ export async function paginatePaper(paper: PaperType): Promise<{
   // 2. Measure blocks
   const blocks: LayoutBlock[] = [];
   for (const unmeasured of unmeasuredBlocks) {
-    const fullHtml = generateBlockHtml(unmeasured, paper.settings.questions.optionLayout);
+    const fullHtml = generateBlockHtml(
+      unmeasured,
+      paper.settings.questions.optionLayout,
+      paper.templateId
+    );
     const heightPx = await measureBlockHeight(
       { ...unmeasured, html: fullHtml, heightPx: 0 },
       dimensions.columnWidthPx,

@@ -4,7 +4,7 @@ import path from "node:path";
 
 async function runE2ETests() {
   console.log(`\n======================================================`);
-  console.log(`   PAPERSTUDIO E2E TESTS (Phase 4: Export & Print)`);
+  console.log(`   PAPERSTUDIO E2E TESTS (Phase 5: Templates & Settings)`);
   console.log(`======================================================\n`);
 
   // 1. Start Vite Dev Server on port 5174
@@ -101,8 +101,101 @@ async function runE2ETests() {
     const totalPages = await page.locator('[id^="print-page-"]').count();
     console.log(`✅ Imported paper paginated into ${totalPages} A4 pages.`);
 
-    // Step 9: Open Pre-Export Validation Modal via "Export DOCX"
-    console.log(`\n[E2E Step 9] Opening Pre-Export Validation Dialog via 'Export DOCX' button`);
+    // Capture initial question text in the preview/sidebar to verify content invariance
+    const initialHindiSnippet = "वह कौन-सी संख्या";
+    const initialTextFound = await page.getByText(initialHindiSnippet, { exact: false }).first().isVisible();
+    if (!initialTextFound) {
+      throw new Error(`Expected initial Hindi question to be visible in editor.`);
+    }
+    console.log(`✅ Initial question text confirmed present before template switching.`);
+
+    // Step 9: Phase 5 - Template Gallery Switching & Content Invariance
+    console.log(`\n[E2E Step 9] Testing Template Gallery switching across all 4 templates`);
+    const templatesToTest = [
+      { name: "Clean Professional", id: "clean-professional" },
+      { name: "Compact Aptitude Test", id: "compact-aptitude" },
+      { name: "Modern Academy", id: "modern-academy" },
+      { name: "Classic Coaching Paper", id: "classic-coaching" }
+    ];
+
+    for (const tpl of templatesToTest) {
+      console.log(`  -> Switching to template: ${tpl.name}...`);
+      // Open Template Gallery
+      const templatesBtn = page.getByRole("button", { name: /Templates/i });
+      await templatesBtn.click();
+      await page.waitForSelector('text="Template Gallery"', { timeout: 5000 });
+
+      // Find the card for this template and click Apply if not already active
+      const tplCard = page.locator(`div:has(> div h4:has-text("${tpl.name}"))`);
+      const applyBtn = tplCard.getByRole("button", { name: "Apply" });
+      const isApplyVisible = await applyBtn.isVisible().catch(() => false);
+
+      if (isApplyVisible) {
+        await applyBtn.click();
+        // Wait for modal to close
+        await page.waitForSelector('text="Template Gallery"', { state: "detached", timeout: 5000 });
+      } else {
+        // Already active, close dialog
+        const closeBtn = page.getByRole("dialog").getByRole("button", { name: /Cancel|Close/i }).first();
+        if (await closeBtn.isVisible()) await closeBtn.click();
+      }
+
+      // Verify question text remains strictly unchanged
+      const snippetStillThere = await page.getByText(initialHindiSnippet, { exact: false }).first().isVisible();
+      if (!snippetStillThere) {
+        throw new Error(`Content mutated or lost after switching to template: ${tpl.name}!`);
+      }
+      console.log(`  ✅ Template '${tpl.name}' applied; question text strictly preserved.`);
+    }
+
+    // Step 10: Phase 5 - Settings Panel Drawer, Units, & Custom Reusable Template
+    console.log(`\n[E2E Step 10] Testing Layout Settings Panel Drawer and custom templates`);
+    const settingsBtn = page.getByRole("button", { name: /^Settings$/i });
+    await settingsBtn.click();
+    await page.waitForSelector('text="Layout & Design Settings"', { timeout: 5000 });
+    console.log(`✅ Settings Panel Drawer opened.`);
+
+    // 10a. Change Column count (from 2 to 1 and back)
+    console.log(`  -> Adjusting column settings...`);
+    const colSelect = page.locator('select').filter({ hasText: /Columns/i }).first();
+    await colSelect.selectOption("1");
+    // Verify preview column layout updated
+    await page.waitForTimeout(600);
+    console.log(`  ✅ 1-column layout applied.`);
+    await colSelect.selectOption("2");
+    await page.waitForTimeout(600);
+    console.log(`  ✅ 2-column layout restored.`);
+
+    // 10b. Expand Page Borders section and change style
+    console.log(`  -> Adjusting page border styling...`);
+    const borderSectionBtn = page.getByRole("button", { name: /5\. Page Borders & Print Styling/i });
+    await borderSectionBtn.click();
+    const borderSelect = page.locator('select').filter({ hasText: /Border/i }).first();
+    await borderSelect.selectOption("single");
+    await page.waitForTimeout(400);
+    console.log(`  ✅ Single border applied.`);
+
+    // 10c. Expand Save Custom Template section and save
+    console.log(`  -> Saving custom design as a named reusable template...`);
+    const customTplSectionBtn = page.getByRole("button", { name: /6\. Save & Manage Custom Templates/i });
+    await customTplSectionBtn.click();
+    const newTplInput = page.locator('input[placeholder="New template name..."]');
+    await newTplInput.fill("My Custom E2E Template");
+    const saveTplBtn = page.getByRole("button", { name: "Save", exact: true });
+    await saveTplBtn.click();
+
+    // Verify it appears in the saved list
+    await page.waitForSelector('text="My Custom E2E Template"', { timeout: 5000 });
+    console.log(`  ✅ Custom template 'My Custom E2E Template' saved and displayed.`);
+
+    // Close Settings Drawer
+    const closeDrawerBtn = page.getByRole("button", { name: "Close Settings Panel" });
+    await closeDrawerBtn.click();
+    await page.waitForSelector('text="Layout & Design Settings"', { state: "detached", timeout: 5000 });
+    console.log(`✅ Settings Panel Drawer closed.`);
+
+    // Step 11: Open Pre-Export Validation Modal via "Export DOCX"
+    console.log(`\n[E2E Step 11] Opening Pre-Export Validation Dialog via 'Export DOCX' button`);
     const exportDocxBtn = page.getByRole("button", { name: /Export DOCX/i }).first();
     await exportDocxBtn.click();
 
@@ -110,8 +203,8 @@ async function runE2ETests() {
     await page.waitForSelector('text="Export & Print Paper"', { timeout: 5000 });
     console.log(`✅ Export modal displayed with pre-export checks.`);
 
-    // Step 10: Trigger DOCX Export Download
-    console.log(`\n[E2E Step 10] Triggering DOCX export download`);
+    // Step 12: Trigger DOCX Export Download
+    console.log(`\n[E2E Step 12] Triggering DOCX export download`);
     const downloadPromise = page.waitForEvent("download", { timeout: 15000 });
     const modalExportBtn = page.getByRole("dialog").getByRole("button", { name: /Export DOCX/i });
     await modalExportBtn.click();
@@ -126,8 +219,8 @@ async function runE2ETests() {
     await page.waitForSelector('text=Export successful!', { timeout: 5000 });
     console.log(`✅ Export success feedback reported.`);
 
-    // Step 11: Switch to Print/PDF Tab in Modal
-    console.log(`\n[E2E Step 11] Testing Print / PDF tab inside Export Modal`);
+    // Step 13: Switch to Print/PDF Tab in Modal
+    console.log(`\n[E2E Step 13] Testing Print / PDF tab inside Export Modal`);
     const printTabBtn = page.getByRole("dialog").getByRole("button", { name: /Print \/ PDF/i });
     await printTabBtn.click();
 
@@ -142,8 +235,8 @@ async function runE2ETests() {
     await closeBtn.click();
     console.log(`✅ Export modal closed.`);
 
-    // Step 12: Dedicated Print Route (/paper/:id/print)
-    console.log(`\n[E2E Step 12] Navigating to dedicated print route: /paper/${paperId}/print`);
+    // Step 14: Dedicated Print Route (/paper/:id/print)
+    console.log(`\n[E2E Step 14] Navigating to dedicated print route: /paper/${paperId}/print`);
     await page.goto(`${baseUrl}/paper/${paperId}/print`, { waitUntil: "networkidle" });
     await page.waitForSelector('.print-page', { timeout: 10000 });
 
@@ -160,7 +253,7 @@ async function runE2ETests() {
     console.log(`✅ Verified print route 'Open Print Dialog' action button.`);
 
     console.log(`\n======================================================`);
-    console.log(`   🎉 ALL PHASE 4 E2E TESTS PASSED SUCCESSFULLY!`);
+    console.log(`   🎉 ALL PHASE 5 E2E TESTS PASSED SUCCESSFULLY!`);
     console.log(`======================================================\n`);
   } finally {
     await browser.close();

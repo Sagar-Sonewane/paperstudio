@@ -1,14 +1,18 @@
 import { create } from "zustand";
 import { getPaper, savePaper } from "../../services/storage/drafts.ts";
+import { saveLastUsedSettings } from "../../services/storage/templates.ts";
 import { createId } from "../../domain/ids.ts";
 import { createDefaultSection } from "../../domain/defaults.ts";
+import { getBuiltinTemplate } from "../../domain/templates/registry.ts";
+import { mergeTemplateSettings } from "../../domain/templates/merge.ts";
 import type {
   PaperType,
   PaperItem,
   QuestionItem,
   QuestionType,
   HeadingItem,
-  InstructionItem
+  InstructionItem,
+  LayoutSettingsType
 } from "../../domain/model.ts";
 
 export type SaveStatus = "idle" | "saving" | "saved" | "error";
@@ -34,14 +38,17 @@ interface PaperStoreState {
 
   // Selection & UI Drawer
   selectedItemId: string | null;
-  activeDrawer: "none" | "question_editor";
+  activeDrawer: "none" | "question_editor" | "settings";
   selectItem: (id: string | null) => void;
   openQuestionEditor: (id: string) => void;
+  openSettingsDrawer: () => void;
   closeDrawer: () => void;
 
   // Paper & Metadata
   loadPaper: (id: string) => Promise<void>;
   setPaper: (paper: PaperType) => void;
+  applyTemplate: (templateId: string) => void;
+  updateLayoutSettings: (updater: (prev: LayoutSettingsType) => LayoutSettingsType) => void;
   updateTitle: (title: string) => void;
   updateInstituteName: (instituteName: string) => void;
   updateExamName: (examName: string) => void;
@@ -139,6 +146,7 @@ export const usePaperStore = create<PaperStoreState>((set, get) => {
 
     selectItem: (id: string | null) => set({ selectedItemId: id }),
     openQuestionEditor: (id: string) => set({ selectedItemId: id, activeDrawer: "question_editor" }),
+    openSettingsDrawer: () => set({ activeDrawer: "settings" }),
     closeDrawer: () => set({ activeDrawer: "none" }),
 
     undo: () => {
@@ -205,6 +213,46 @@ export const usePaperStore = create<PaperStoreState>((set, get) => {
       recordHistory();
       set({ paper });
       triggerDebouncedSave();
+    },
+
+    applyTemplate: (templateId: string) => {
+      const current = get().paper;
+      if (!current) return;
+      recordHistory();
+      const tpl = getBuiltinTemplate(templateId);
+      const mergedSettings = mergeTemplateSettings(tpl.defaults, {
+        header: {
+          ...tpl.defaults.header,
+          instituteName: current.settings.header.instituteName || tpl.defaults.header.instituteName,
+          subtitle: current.settings.header.subtitle || tpl.defaults.header.subtitle,
+          logoMediaId: current.settings.header.logoMediaId
+        }
+      });
+
+      const updated: PaperType = {
+        ...current,
+        templateId,
+        settings: mergedSettings,
+        updatedAt: Date.now()
+      };
+      set({ paper: updated });
+      triggerDebouncedSave();
+      saveLastUsedSettings(mergedSettings);
+    },
+
+    updateLayoutSettings: (updater: (prev: LayoutSettingsType) => LayoutSettingsType) => {
+      const current = get().paper;
+      if (!current) return;
+      recordHistory();
+      const newSettings = updater(current.settings);
+      const updated: PaperType = {
+        ...current,
+        settings: newSettings,
+        updatedAt: Date.now()
+      };
+      set({ paper: updated });
+      triggerDebouncedSave();
+      saveLastUsedSettings(newSettings);
     },
 
     updateTitle: (title: string) => {

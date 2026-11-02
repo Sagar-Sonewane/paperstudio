@@ -7,6 +7,9 @@ import { db } from "../../services/storage/db.ts";
 import { paginatePaper } from "../../services/layout/paginate.ts";
 import { calcDimensions, type PageLayout, type LayoutDimensions } from "../../services/layout/rules.ts";
 import type { PaperType } from "../../domain/model.ts";
+import { TemplateHeader } from "../templates/TemplateHeader.tsx";
+import { TemplateFooter } from "../templates/TemplateFooter.tsx";
+import { getPageBorderStyle } from "../templates/borders.ts";
 
 export function PrintPaperView() {
   const { id } = useParams<{ id: string }>();
@@ -159,30 +162,17 @@ export function PrintPaperView() {
               overflow: "hidden"
             }}
           >
-            {/* Outer Double Border for Classic Coaching Template */}
+            {/* Outer Page Border (styled dynamically per template/settings) */}
             <div
               className="w-full h-full flex flex-col relative box-border"
-              style={{
-                border: "3.5px double #000000",
-                padding: "5mm 6mm"
-              }}
+              style={getPageBorderStyle(paper.settings.border)}
             >
-              {/* Running Header */}
-              <header className="border-b-2 border-black pb-2 mb-3 text-center shrink-0">
-                <h1 className="text-base font-extrabold uppercase tracking-wide text-black">
-                  {paper.settings.header.instituteName || "EXCELLENCE COACHING INSTITUTE"}
-                </h1>
-                <div className="flex justify-between items-center text-[11px] font-semibold mt-1 px-1 text-black">
-                  <span>{paper.meta.examName || paper.title}</span>
-                  <span>Total Marks: {paper.meta.totalMarks || 100}</span>
-                  <span>Time: {paper.meta.durationMin || 60} Mins</span>
-                </div>
-                <div className="flex justify-between items-center text-[10px] text-black border-t border-dotted border-black pt-1 mt-1 px-1">
-                  <span>Name: _______________________________</span>
-                  <span>Roll No: ____________</span>
-                  <span>Date: {paper.meta.date || "____________"}</span>
-                </div>
-              </header>
+              {/* Template-Aware Running Header */}
+              <TemplateHeader
+                paper={paper}
+                pageNumber={page.pageNumber}
+                totalPages={pages.length}
+              />
 
               {/* Multi-Column Question Content Area */}
               <section
@@ -219,14 +209,12 @@ export function PrintPaperView() {
                 ))}
               </section>
 
-              {/* Running Footer */}
-              <footer className="border-t border-black pt-1 mt-2 text-[10px] font-semibold text-black flex justify-between items-center shrink-0">
-                <span>PaperStudio &bull; Classic Series</span>
-                <span>
-                  Page {page.pageNumber} of {pages.length}
-                </span>
-                <span>Signature: ____________</span>
-              </footer>
+              {/* Template-Aware Running Footer */}
+              <TemplateFooter
+                paper={paper}
+                pageNumber={page.pageNumber}
+                totalPages={pages.length}
+              />
             </div>
           </div>
         ))}
@@ -234,3 +222,4 @@ export function PrintPaperView() {
     </div>
   );
 }
+
